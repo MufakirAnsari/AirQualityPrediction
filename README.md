@@ -47,7 +47,7 @@ This repository offers a robust, modular, and fully automated Python pipeline fo
 ### 1. Installation
 
 ```bash
-git clone https://github.com/yourusername/air-quality-pipeline.git
+git clone https://github.com/MufakirAnsari/AirQualityPrediction.git
 cd air-quality-pipeline
 python -m venv venv
 source venv/bin/activate
@@ -91,9 +91,6 @@ Options:
 
 If you use or adapt this pipeline for research or production, please consider citing or referencing this repository in your publications or documentation.
 
-## Contributors
-
-- [Your name(s) here]
 
 ## License
 
