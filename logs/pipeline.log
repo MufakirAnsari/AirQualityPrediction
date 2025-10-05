@@ -1,0 +1,2493 @@
+2025-10-04 22:35:11,721 - config_loader - INFO - Logging configured
+2025-10-04 22:35:11,722 - __main__ - INFO - Working directory: /home/ansari/farah
+2025-10-04 22:35:11,722 - config_loader - INFO - Required directories created
+2025-10-04 22:35:11,723 - __main__ - INFO - Enhanced pipeline started at 2025-10-04 22:35:11
+2025-10-04 22:35:11,723 - __main__ - INFO - === Loading and Preparing Data ===
+2025-10-04 22:35:11,724 - load_data - INFO - === Loading and Preparing Data ===
+2025-10-04 22:35:11,735 - load_data - INFO - Raw data loaded with shape: (10191, 10)
+2025-10-04 22:35:11,736 - load_data - INFO - Columns after stripping: ['Location', 'Date', 'Time', 'CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)']
+2025-10-04 22:35:11,749 - load_data - INFO - Created AQI_Category from PM2.5 values
+2025-10-04 22:35:11,752 - load_data - INFO - Data shape after cleaning: (10184, 14)
+2025-10-04 22:35:11,798 - load_data - INFO - Saved cleaned data to artifacts/data_cleaned.csv
+2025-10-04 22:35:11,798 - __main__ - INFO - Applying feature engineering...
+2025-10-04 22:35:11,799 - feature_engineering - INFO - Creating advanced features...
+2025-10-04 22:35:11,802 - __main__ - ERROR - Pipeline failed: 'DayOfWeek'
+2025-10-04 22:36:34,241 - config_loader - INFO - Logging configured
+2025-10-04 22:36:34,242 - __main__ - INFO - Working directory: /home/ansari/farah
+2025-10-04 22:36:34,243 - config_loader - INFO - Required directories created
+2025-10-04 22:36:34,243 - __main__ - INFO - Enhanced pipeline started at 2025-10-04 22:36:34
+2025-10-04 22:36:34,243 - __main__ - INFO - === Loading and Preparing Data ===
+2025-10-04 22:36:34,244 - load_data - INFO - === Loading and Preparing Data ===
+2025-10-04 22:36:34,255 - load_data - INFO - Raw data loaded with shape: (10191, 10)
+2025-10-04 22:36:34,256 - load_data - INFO - Columns after stripping: ['Location', 'Date', 'Time', 'CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)']
+2025-10-04 22:36:34,267 - load_data - INFO - Created AQI_Category from PM2.5 values
+2025-10-04 22:36:34,269 - load_data - INFO - Data shape after cleaning: (10184, 14)
+2025-10-04 22:36:34,313 - load_data - INFO - Saved cleaned data to artifacts/data_cleaned.csv
+2025-10-04 22:36:34,314 - __main__ - INFO - Applying feature engineering...
+2025-10-04 22:36:34,314 - feature_engineering - INFO - Creating advanced features...
+2025-10-04 22:36:34,332 - feature_engineering - INFO - Enhanced features created. New shape: (10184, 55)
+2025-10-04 22:36:34,332 - feature_engineering - INFO - New features added: {'CO_NO2_product', 'PM2.5(µg/m³)_3h_std', 'SO2(µg/m³)_lag1', 'IsWeekend', 'Hour_sin', 'Month_sin', 'SO2(µg/m³)_6h_mean', 'CO_NO2_ratio', 'NO2(µg/m³)_3h_mean', 'DayOfWeek', 'SO2(µg/m³)_lag2', 'PM25_severity', 'NO2(µg/m³)_lag1', 'PM10(µg/m³)_6h_mean', 'Temp_RH_product', 'CO (mg/m3)_lag2', 'CO (mg/m3)_3h_mean', 'PM2.5(µg/m³)_3h_mean', 'SO2(µg/m³)_3h_std', 'PM2.5(µg/m³)_lag2', 'Hour_cos', 'PM2.5(µg/m³)_6h_mean', 'PM10(µg/m³)_lag1', 'PM10(µg/m³)_3h_mean', 'Quarter', 'PM2.5(µg/m³)_lag1', 'NO2(µg/m³)_lag2', 'PM25_PM10_ratio', 'SO2_NO2_ratio', 'PM25_trend', 'PM_combined', 'CO (mg/m3)_6h_mean', 'PM10(µg/m³)_3h_std', 'CO (mg/m3)_3h_std', 'NO2(µg/m³)_6h_mean', 'CO (mg/m3)_lag1', 'PM10(µg/m³)_lag2', 'Month_cos', 'NO2(µg/m³)_3h_std', 'SO2(µg/m³)_3h_mean', 'Heat_Index'}
+2025-10-04 22:36:34,333 - __main__ - INFO - 
+=== Running Data Quality Analysis ===
+2025-10-04 22:36:34,333 - utils - INFO - Validating data quality...
+2025-10-04 22:36:34,350 - utils - WARNING - Data quality issues found:
+2025-10-04 22:36:34,350 - utils - WARNING -   - Columns with >50% missing values: {'Date': 61.35113904163394, 'Month': 61.35113904163394, 'Hour': 100.0, 'DayOfWeek': 61.35113904163394, 'Quarter': 61.35113904163394, 'Hour_sin': 100.0, 'Hour_cos': 100.0, 'Month_sin': 61.35113904163394, 'Month_cos': 61.35113904163394}
+2025-10-04 22:36:34,502 - __main__ - INFO - Detected 962 outliers in PM2.5(µg/m³)
+2025-10-04 22:36:34,512 - __main__ - ERROR - Data quality analysis failed: Cannot save file into a non-existent directory: 'artifacts/data_quality'
+2025-10-04 22:36:34,512 - __main__ - INFO - === Starting Enhanced Classification Pipeline ===
+2025-10-04 22:36:34,513 - __main__ - INFO - 
+--- Processing Spring ---
+2025-10-04 22:36:34,515 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 22:36:34,515 - __main__ - INFO - Spring data shape: (1075, 55)
+2025-10-04 22:36:34,515 - eda - INFO - Performing EDA for Spring
+2025-10-04 22:36:39,186 - eda - INFO - EDA completed for Spring. Plots saved to artifacts/eda/spring
+2025-10-04 22:36:39,187 - preprocess - INFO - Preprocessing data for Spring
+2025-10-04 22:36:39,187 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 22:36:39,196 - preprocess - INFO - Training samples: 688
+2025-10-04 22:36:39,196 - preprocess - INFO - Evaluation samples: 172
+2025-10-04 22:36:39,196 - preprocess - INFO - Prediction samples: 215
+2025-10-04 22:36:39,197 - __main__ - ERROR - Model training failed for Spring: train_and_evaluate_classification_models() got an unexpected keyword argument 'tune_hyperparams'
+2025-10-04 22:36:39,197 - __main__ - INFO - 
+--- Processing Summer ---
+2025-10-04 22:36:39,199 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 22:36:39,199 - __main__ - INFO - Summer data shape: (816, 55)
+2025-10-04 22:36:39,199 - eda - INFO - Performing EDA for Summer
+2025-10-04 22:36:43,952 - eda - INFO - EDA completed for Summer. Plots saved to artifacts/eda/summer
+2025-10-04 22:36:43,952 - preprocess - INFO - Preprocessing data for Summer
+2025-10-04 22:36:43,953 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 22:36:43,961 - preprocess - INFO - Training samples: 521
+2025-10-04 22:36:43,961 - preprocess - INFO - Evaluation samples: 131
+2025-10-04 22:36:43,962 - preprocess - INFO - Prediction samples: 164
+2025-10-04 22:36:43,962 - __main__ - ERROR - Model training failed for Summer: train_and_evaluate_classification_models() got an unexpected keyword argument 'tune_hyperparams'
+2025-10-04 22:36:43,963 - __main__ - INFO - 
+--- Processing Autumn ---
+2025-10-04 22:36:43,965 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 22:36:43,965 - __main__ - INFO - Autumn data shape: (7228, 55)
+2025-10-04 22:36:43,966 - eda - INFO - Performing EDA for Autumn
+2025-10-04 22:36:48,781 - eda - INFO - EDA completed for Autumn. Plots saved to artifacts/eda/autumn
+2025-10-04 22:36:48,782 - preprocess - INFO - Preprocessing data for Autumn
+2025-10-04 22:36:48,782 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 22:36:48,798 - preprocess - INFO - Training samples: 4625
+2025-10-04 22:36:48,799 - preprocess - INFO - Evaluation samples: 1157
+2025-10-04 22:36:48,799 - preprocess - INFO - Prediction samples: 1446
+2025-10-04 22:36:48,799 - __main__ - ERROR - Model training failed for Autumn: train_and_evaluate_classification_models() got an unexpected keyword argument 'tune_hyperparams'
+2025-10-04 22:36:48,800 - __main__ - INFO - 
+--- Processing Winter ---
+2025-10-04 22:36:48,802 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 22:36:48,802 - __main__ - INFO - Winter data shape: (1065, 55)
+2025-10-04 22:36:48,802 - eda - INFO - Performing EDA for Winter
+2025-10-04 22:36:53,563 - eda - INFO - EDA completed for Winter. Plots saved to artifacts/eda/winter
+2025-10-04 22:36:53,564 - preprocess - INFO - Preprocessing data for Winter
+2025-10-04 22:36:53,564 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 22:36:53,573 - preprocess - INFO - Training samples: 681
+2025-10-04 22:36:53,573 - preprocess - INFO - Evaluation samples: 171
+2025-10-04 22:36:53,574 - preprocess - INFO - Prediction samples: 213
+2025-10-04 22:36:53,574 - __main__ - ERROR - Model training failed for Winter: train_and_evaluate_classification_models() got an unexpected keyword argument 'tune_hyperparams'
+2025-10-04 22:36:53,575 - __main__ - INFO - Classification pipeline completed for 0 seasons
+2025-10-04 22:36:53,575 - __main__ - INFO - 
+=== Starting Enhanced Regression Pipeline ===
+2025-10-04 22:36:53,576 - preprocess - INFO - Preprocessing data for regression
+2025-10-04 22:36:53,576 - preprocess - INFO - Available regression features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 22:36:53,586 - preprocess - INFO - Regression training samples: 8147
+2025-10-04 22:36:53,586 - preprocess - INFO - Regression test samples: 2037
+2025-10-04 22:36:53,587 - __main__ - ERROR - Regression pipeline failed: train_and_evaluate_regression_models() got an unexpected keyword argument 'tune_hyperparams'
+2025-10-04 22:36:53,587 - __main__ - INFO - 
+=== Starting Enhanced Visualization Pipeline ===
+2025-10-04 22:36:53,587 - config_loader - WARNING - Configuration key 'plotting.sample_size' not found, using default: 100
+2025-10-04 22:36:53,587 - plot_sampled_predictions - INFO - Creating regression prediction plots on random sample
+2025-10-04 22:36:53,597 - plot_sampled_predictions - ERROR - No regression models found. Please train regression models first.
+2025-10-04 22:36:53,598 - compare_model_predictions - INFO - Comparing classification models for Spring
+2025-10-04 22:36:53,607 - compare_model_predictions - ERROR - Not enough models available for comparison in Spring
+2025-10-04 22:36:53,607 - compare_model_predictions - INFO - Comparing classification models for Summer
+2025-10-04 22:36:53,616 - compare_model_predictions - ERROR - Not enough models available for comparison in Summer
+2025-10-04 22:36:53,616 - compare_model_predictions - INFO - Comparing classification models for Autumn
+2025-10-04 22:36:53,625 - compare_model_predictions - ERROR - Not enough models available for comparison in Autumn
+2025-10-04 22:36:53,626 - compare_model_predictions - INFO - Comparing classification models for Winter
+2025-10-04 22:36:53,634 - compare_model_predictions - ERROR - Not enough models available for comparison in Winter
+2025-10-04 22:36:53,635 - compare_model_predictions - INFO - Comparing regression models
+2025-10-04 22:36:53,643 - compare_model_predictions - ERROR - Not enough regression models available for comparison
+2025-10-04 22:36:53,644 - evaluate_enhanced - INFO - Performing advanced seasonal model comparison
+2025-10-04 22:36:53,646 - evaluate_enhanced - WARNING - No seasonal results found for comparison
+2025-10-04 22:36:53,647 - __main__ - INFO - Enhanced visualization pipeline completed
+2025-10-04 22:36:53,647 - __main__ - INFO - 
+=== Enhanced Pipeline Summary ===
+2025-10-04 22:36:53,648 - __main__ - INFO - Total execution time: 19.40 seconds
+2025-10-04 22:36:53,648 - __main__ - INFO - Configuration used: config.yaml
+2025-10-04 22:36:53,648 - __main__ - INFO - Classification models trained for: []
+2025-10-04 22:36:53,649 - __main__ - INFO - Regression models trained: 0 models
+2025-10-04 22:36:53,649 - __main__ - INFO - Hyperparameter tuning: Disabled
+2025-10-04 22:36:53,649 - __main__ - INFO - Ensemble models: Disabled
+2025-10-04 22:36:53,649 - __main__ - INFO - Experiment tracking: Disabled
+2025-10-04 22:36:53,650 - __main__ - INFO - Artifacts saved to: /home/ansari/farah/artifacts
+2025-10-04 22:36:53,650 - config_loader - WARNING - Configuration key 'advanced.run_tests' not found, using default: False
+2025-10-04 22:40:14,214 - config_loader - INFO - Logging configured
+2025-10-04 22:40:14,214 - __main__ - INFO - Working directory: /home/ansari/farah
+2025-10-04 22:40:14,215 - config_loader - INFO - Required directories created
+2025-10-04 22:40:14,216 - __main__ - INFO - Enhanced pipeline started at 2025-10-04 22:40:14
+2025-10-04 22:40:14,216 - __main__ - INFO - === Loading and Preparing Data ===
+2025-10-04 22:40:14,216 - load_data - INFO - === Loading and Preparing Data ===
+2025-10-04 22:40:14,228 - load_data - INFO - Raw data loaded with shape: (10191, 10)
+2025-10-04 22:40:14,229 - load_data - INFO - Columns after stripping: ['Location', 'Date', 'Time', 'CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)']
+2025-10-04 22:40:14,240 - load_data - INFO - Created AQI_Category from PM2.5 values
+2025-10-04 22:40:14,243 - load_data - INFO - Data shape after cleaning: (10184, 14)
+2025-10-04 22:40:14,287 - load_data - INFO - Saved cleaned data to artifacts/data_cleaned.csv
+2025-10-04 22:40:14,287 - __main__ - INFO - Applying feature engineering...
+2025-10-04 22:40:14,288 - feature_engineering - INFO - Creating advanced features...
+2025-10-04 22:40:14,305 - feature_engineering - INFO - Enhanced features created. New shape: (10184, 55)
+2025-10-04 22:40:14,305 - feature_engineering - INFO - New features added: {'CO (mg/m3)_lag2', 'CO_NO2_ratio', 'CO (mg/m3)_lag1', 'NO2(µg/m³)_3h_mean', 'PM2.5(µg/m³)_lag1', 'Month_cos', 'SO2(µg/m³)_lag1', 'PM10(µg/m³)_3h_mean', 'SO2(µg/m³)_3h_mean', 'Temp_RH_product', 'Hour_cos', 'SO2(µg/m³)_6h_mean', 'PM2.5(µg/m³)_6h_mean', 'SO2(µg/m³)_3h_std', 'PM25_severity', 'PM25_trend', 'PM10(µg/m³)_6h_mean', 'CO (mg/m3)_3h_std', 'Hour_sin', 'PM2.5(µg/m³)_3h_mean', 'SO2(µg/m³)_lag2', 'DayOfWeek', 'PM10(µg/m³)_3h_std', 'NO2(µg/m³)_lag1', 'Month_sin', 'SO2_NO2_ratio', 'PM_combined', 'PM2.5(µg/m³)_3h_std', 'PM25_PM10_ratio', 'IsWeekend', 'CO (mg/m3)_6h_mean', 'CO_NO2_product', 'Heat_Index', 'PM10(µg/m³)_lag2', 'PM2.5(µg/m³)_lag2', 'NO2(µg/m³)_lag2', 'PM10(µg/m³)_lag1', 'NO2(µg/m³)_3h_std', 'NO2(µg/m³)_6h_mean', 'Quarter', 'CO (mg/m3)_3h_mean'}
+2025-10-04 22:40:14,305 - __main__ - INFO - 
+=== Running Data Quality Analysis ===
+2025-10-04 22:40:14,306 - utils - INFO - Validating data quality...
+2025-10-04 22:40:14,323 - utils - WARNING - Data quality issues found:
+2025-10-04 22:40:14,324 - utils - WARNING -   - Columns with >50% missing values: {'Date': 61.35113904163394, 'Month': 61.35113904163394, 'Hour': 100.0, 'DayOfWeek': 61.35113904163394, 'Quarter': 61.35113904163394, 'Hour_sin': 100.0, 'Hour_cos': 100.0, 'Month_sin': 61.35113904163394, 'Month_cos': 61.35113904163394}
+2025-10-04 22:40:14,473 - __main__ - INFO - Detected 962 outliers in PM2.5(µg/m³)
+2025-10-04 22:40:14,483 - __main__ - ERROR - Data quality analysis failed: Cannot save file into a non-existent directory: 'artifacts/data_quality'
+2025-10-04 22:40:14,484 - __main__ - INFO - === Starting Enhanced Classification Pipeline ===
+2025-10-04 22:40:14,484 - __main__ - INFO - 
+--- Processing Spring ---
+2025-10-04 22:40:14,486 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 22:40:14,486 - __main__ - INFO - Spring data shape: (1075, 55)
+2025-10-04 22:40:14,486 - eda - INFO - Performing EDA for Spring
+2025-10-04 22:40:19,144 - eda - INFO - EDA completed for Spring. Plots saved to artifacts/eda/spring
+2025-10-04 22:40:19,144 - preprocess - INFO - Preprocessing data for Spring
+2025-10-04 22:40:19,145 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 22:40:19,153 - preprocess - INFO - Training samples: 688
+2025-10-04 22:40:19,153 - preprocess - INFO - Evaluation samples: 172
+2025-10-04 22:40:19,154 - preprocess - INFO - Prediction samples: 215
+2025-10-04 22:40:19,154 - models - INFO - Training classification models for Spring
+2025-10-04 22:40:19,155 - models - INFO - Training LogisticRegression...
+2025-10-04 22:40:19,166 - models - INFO - LogisticRegression - F1: 0.9388, Accuracy: 0.9360
+2025-10-04 22:40:19,166 - models - INFO - Training RandomForest...
+2025-10-04 22:40:19,312 - models - INFO - RandomForest - F1: 0.9938, Accuracy: 0.9942
+2025-10-04 22:40:19,313 - models - INFO - Training XGBoost...
+2025-10-04 22:40:19,624 - models - INFO - XGBoost - F1: 0.9920, Accuracy: 0.9942
+2025-10-04 22:40:19,624 - models - INFO - Training LightGBM...
+2025-10-04 22:40:19,665 - models - INFO - LightGBM - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 22:40:19,665 - models - INFO - Training DecisionTree...
+2025-10-04 22:40:19,670 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 22:40:19,670 - models - INFO - Training SVM...
+2025-10-04 22:40:19,699 - models - INFO - SVM - F1: 0.8947, Accuracy: 0.9012
+2025-10-04 22:40:19,699 - models - INFO - Training MLP...
+2025-10-04 22:40:20,274 - models - INFO - MLP - F1: 0.9472, Accuracy: 0.9535
+2025-10-04 22:40:20,275 - models - INFO - Best Spring classification model: LightGBM (F1: 1.0000)
+2025-10-04 22:40:20,276 - evaluate_enhanced - INFO - Generating comprehensive report for Spring classification
+2025-10-04 22:40:20,277 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/spring/comprehensive_report.md
+2025-10-04 22:40:20,277 - __main__ - INFO - 
+--- Processing Summer ---
+2025-10-04 22:40:20,279 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 22:40:20,279 - __main__ - INFO - Summer data shape: (816, 55)
+2025-10-04 22:40:20,280 - eda - INFO - Performing EDA for Summer
+2025-10-04 22:40:24,938 - eda - INFO - EDA completed for Summer. Plots saved to artifacts/eda/summer
+2025-10-04 22:40:24,939 - preprocess - INFO - Preprocessing data for Summer
+2025-10-04 22:40:24,939 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 22:40:24,948 - preprocess - INFO - Training samples: 521
+2025-10-04 22:40:24,949 - preprocess - INFO - Evaluation samples: 131
+2025-10-04 22:40:24,949 - preprocess - INFO - Prediction samples: 164
+2025-10-04 22:40:24,950 - models - INFO - Training classification models for Summer
+2025-10-04 22:40:24,951 - models - INFO - Training LogisticRegression...
+2025-10-04 22:40:24,961 - models - INFO - LogisticRegression - F1: 0.9777, Accuracy: 0.9771
+2025-10-04 22:40:24,961 - models - INFO - Training RandomForest...
+2025-10-04 22:40:25,108 - models - INFO - RandomForest - F1: 0.9708, Accuracy: 0.9771
+2025-10-04 22:40:25,108 - models - INFO - Training XGBoost...
+2025-10-04 22:40:25,188 - models - INFO - XGBoost - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 22:40:25,188 - models - INFO - Training LightGBM...
+2025-10-04 22:40:25,220 - models - INFO - LightGBM - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 22:40:25,220 - models - INFO - Training DecisionTree...
+2025-10-04 22:40:25,225 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 22:40:25,225 - models - INFO - Training SVM...
+2025-10-04 22:40:25,247 - models - INFO - SVM - F1: 0.9335, Accuracy: 0.9389
+2025-10-04 22:40:25,247 - models - INFO - Training MLP...
+2025-10-04 22:40:25,716 - models - INFO - MLP - F1: 0.9665, Accuracy: 0.9695
+2025-10-04 22:40:25,718 - models - INFO - Best Summer classification model: XGBoost (F1: 1.0000)
+2025-10-04 22:40:25,718 - evaluate_enhanced - INFO - Generating comprehensive report for Summer classification
+2025-10-04 22:40:25,720 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/summer/comprehensive_report.md
+2025-10-04 22:40:25,720 - __main__ - INFO - 
+--- Processing Autumn ---
+2025-10-04 22:40:25,723 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 22:40:25,723 - __main__ - INFO - Autumn data shape: (7228, 55)
+2025-10-04 22:40:25,723 - eda - INFO - Performing EDA for Autumn
+2025-10-04 22:40:30,425 - eda - INFO - EDA completed for Autumn. Plots saved to artifacts/eda/autumn
+2025-10-04 22:40:30,426 - preprocess - INFO - Preprocessing data for Autumn
+2025-10-04 22:40:30,426 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 22:40:30,441 - preprocess - INFO - Training samples: 4625
+2025-10-04 22:40:30,442 - preprocess - INFO - Evaluation samples: 1157
+2025-10-04 22:40:30,442 - preprocess - INFO - Prediction samples: 1446
+2025-10-04 22:40:30,442 - models - INFO - Training classification models for Autumn
+2025-10-04 22:40:30,444 - models - INFO - Training LogisticRegression...
+2025-10-04 22:40:30,479 - models - INFO - LogisticRegression - F1: 0.9842, Accuracy: 0.9836
+2025-10-04 22:40:30,479 - models - INFO - Training RandomForest...
+2025-10-04 22:40:30,801 - models - INFO - RandomForest - F1: 0.9978, Accuracy: 0.9974
+2025-10-04 22:40:30,802 - models - INFO - Training XGBoost...
+2025-10-04 22:40:30,865 - models - INFO - XGBoost - F1: 0.9978, Accuracy: 0.9974
+2025-10-04 22:40:30,866 - models - INFO - Training LightGBM...
+2025-10-04 22:40:30,974 - models - INFO - LightGBM - F1: 0.9985, Accuracy: 0.9983
+2025-10-04 22:40:30,974 - models - INFO - Training DecisionTree...
+2025-10-04 22:40:30,983 - models - INFO - DecisionTree - F1: 0.9985, Accuracy: 0.9983
+2025-10-04 22:40:30,983 - models - INFO - Training SVM...
+2025-10-04 22:40:31,515 - models - INFO - SVM - F1: 0.9615, Accuracy: 0.9611
+2025-10-04 22:40:31,516 - models - INFO - Training MLP...
+2025-10-04 22:40:34,476 - models - INFO - MLP - F1: 0.9888, Accuracy: 0.9922
+2025-10-04 22:40:34,478 - models - INFO - Best Autumn classification model: LightGBM (F1: 0.9985)
+2025-10-04 22:40:34,479 - evaluate_enhanced - INFO - Generating comprehensive report for Autumn classification
+2025-10-04 22:40:34,480 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/autumn/comprehensive_report.md
+2025-10-04 22:40:34,480 - __main__ - INFO - 
+--- Processing Winter ---
+2025-10-04 22:40:34,482 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 22:40:34,482 - __main__ - INFO - Winter data shape: (1065, 55)
+2025-10-04 22:40:34,483 - eda - INFO - Performing EDA for Winter
+2025-10-04 22:40:39,184 - eda - INFO - EDA completed for Winter. Plots saved to artifacts/eda/winter
+2025-10-04 22:40:39,184 - preprocess - INFO - Preprocessing data for Winter
+2025-10-04 22:40:39,185 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 22:40:39,194 - preprocess - INFO - Training samples: 681
+2025-10-04 22:40:39,194 - preprocess - INFO - Evaluation samples: 171
+2025-10-04 22:40:39,194 - preprocess - INFO - Prediction samples: 213
+2025-10-04 22:40:39,195 - models - INFO - Training classification models for Winter
+2025-10-04 22:40:39,196 - models - INFO - Training LogisticRegression...
+2025-10-04 22:40:39,206 - models - INFO - LogisticRegression - F1: 0.9434, Accuracy: 0.9415
+2025-10-04 22:40:39,207 - models - INFO - Training RandomForest...
+2025-10-04 22:40:39,361 - models - INFO - RandomForest - F1: 0.9736, Accuracy: 0.9766
+2025-10-04 22:40:39,362 - models - INFO - Training XGBoost...
+2025-10-04 22:40:39,427 - models - INFO - XGBoost - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 22:40:39,428 - models - INFO - Training LightGBM...
+2025-10-04 22:40:39,517 - models - INFO - LightGBM - F1: 0.9653, Accuracy: 0.9708
+2025-10-04 22:40:39,518 - models - INFO - Training DecisionTree...
+2025-10-04 22:40:39,523 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 22:40:39,523 - models - INFO - Training SVM...
+2025-10-04 22:40:39,552 - models - INFO - SVM - F1: 0.8943, Accuracy: 0.9064
+2025-10-04 22:40:39,553 - models - INFO - Training MLP...
+2025-10-04 22:40:40,201 - models - INFO - MLP - F1: 0.9659, Accuracy: 0.9708
+2025-10-04 22:40:40,203 - models - INFO - Best Winter classification model: XGBoost (F1: 1.0000)
+2025-10-04 22:40:40,204 - evaluate_enhanced - INFO - Generating comprehensive report for Winter classification
+2025-10-04 22:40:40,205 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/winter/comprehensive_report.md
+2025-10-04 22:40:40,205 - __main__ - INFO - Classification pipeline completed for 4 seasons
+2025-10-04 22:40:40,206 - __main__ - INFO - 
+=== Starting Enhanced Regression Pipeline ===
+2025-10-04 22:40:40,206 - preprocess - INFO - Preprocessing data for regression
+2025-10-04 22:40:40,207 - preprocess - INFO - Available regression features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 22:40:40,218 - preprocess - INFO - Regression training samples: 8147
+2025-10-04 22:40:40,218 - preprocess - INFO - Regression test samples: 2037
+2025-10-04 22:40:40,219 - models - INFO - Training regression models for PM2.5
+2025-10-04 22:40:40,219 - models - INFO - Training LinearRegression regression...
+2025-10-04 22:40:40,222 - models - INFO - LinearRegression - R²: 0.5983, RMSE: 11.7788
+2025-10-04 22:40:40,223 - models - INFO - Training DecisionTree regression...
+2025-10-04 22:40:40,260 - models - INFO - DecisionTree - R²: 0.6944, RMSE: 10.2745
+2025-10-04 22:40:40,260 - models - INFO - Training RandomForest regression...
+2025-10-04 22:40:42,468 - models - INFO - RandomForest - R²: 0.8396, RMSE: 7.4426
+2025-10-04 22:40:42,469 - models - INFO - Training XGBoost regression...
+2025-10-04 22:40:42,532 - models - INFO - XGBoost - R²: 0.8204, RMSE: 7.8759
+2025-10-04 22:40:42,533 - models - INFO - Training LightGBM regression...
+2025-10-04 22:40:42,576 - models - INFO - LightGBM - R²: 0.8301, RMSE: 7.6597
+2025-10-04 22:40:42,576 - models - INFO - Training SVM regression...
+2025-10-04 22:40:44,465 - models - INFO - SVM - R²: 0.7550, RMSE: 9.1984
+2025-10-04 22:40:44,465 - models - INFO - Training MLP regression...
+2025-10-04 22:40:52,722 - models - INFO - MLP - R²: 0.7937, RMSE: 8.4421
+2025-10-04 22:40:54,540 - models - INFO - Regression comparison plot saved to artifacts/models/regression/regression_comparison.png
+2025-10-04 22:40:54,543 - models - INFO - Regression model training completed
+2025-10-04 22:40:54,544 - evaluate_enhanced - INFO - Generating comprehensive report for Regression regression
+2025-10-04 22:40:54,545 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/regression/comprehensive_report.md
+2025-10-04 22:40:54,545 - __main__ - INFO - Enhanced regression pipeline completed successfully
+2025-10-04 22:40:54,546 - __main__ - INFO - 
+=== Starting Enhanced Visualization Pipeline ===
+2025-10-04 22:40:54,546 - config_loader - WARNING - Configuration key 'plotting.sample_size' not found, using default: 100
+2025-10-04 22:40:54,546 - plot_sampled_predictions - INFO - Creating regression prediction plots on random sample
+2025-10-04 22:40:54,559 - plot_sampled_predictions - INFO - Found 7 models: ['LinearRegression', 'DecisionTree', 'RandomForest', 'XGBoost', 'LightGBM', 'SVM', 'MLP']
+2025-10-04 22:40:54,563 - plot_sampled_predictions - INFO - LinearRegression R²: 0.704
+2025-10-04 22:40:54,565 - plot_sampled_predictions - INFO - DecisionTree R²: 0.996
+2025-10-04 22:40:54,646 - plot_sampled_predictions - INFO - RandomForest R²: 0.960
+2025-10-04 22:40:54,669 - plot_sampled_predictions - INFO - XGBoost R²: 0.909
+2025-10-04 22:40:54,676 - plot_sampled_predictions - INFO - LightGBM R²: 0.841
+2025-10-04 22:40:54,704 - plot_sampled_predictions - INFO - SVM R²: 0.720
+2025-10-04 22:40:54,709 - plot_sampled_predictions - INFO - MLP R²: 0.781
+2025-10-04 22:40:56,606 - plot_sampled_predictions - INFO - Sampled predictions plot saved to artifacts/models/regression/sampled_predictions_comparison.png
+2025-10-04 22:40:56,607 - compare_model_predictions - INFO - Comparing classification models for Spring
+2025-10-04 22:40:58,690 - compare_model_predictions - INFO - Classification model comparison completed for Spring
+2025-10-04 22:40:58,691 - compare_model_predictions - INFO - Comparing classification models for Summer
+2025-10-04 22:41:00,120 - compare_model_predictions - INFO - Classification model comparison completed for Summer
+2025-10-04 22:41:00,120 - compare_model_predictions - INFO - Comparing classification models for Autumn
+2025-10-04 22:41:01,493 - compare_model_predictions - INFO - Classification model comparison completed for Autumn
+2025-10-04 22:41:01,494 - compare_model_predictions - INFO - Comparing classification models for Winter
+2025-10-04 22:41:02,883 - compare_model_predictions - INFO - Classification model comparison completed for Winter
+2025-10-04 22:41:02,884 - compare_model_predictions - INFO - Comparing regression models
+2025-10-04 22:41:04,337 - compare_model_predictions - INFO - Regression model comparison completed
+2025-10-04 22:41:04,337 - evaluate_enhanced - INFO - Performing advanced seasonal model comparison
+2025-10-04 22:41:05,115 - evaluate_enhanced - INFO - Advanced seasonal comparison completed
+2025-10-04 22:41:05,116 - __main__ - INFO - Enhanced visualization pipeline completed
+2025-10-04 22:41:05,116 - __main__ - INFO - 
+=== Enhanced Pipeline Summary ===
+2025-10-04 22:41:05,117 - __main__ - INFO - Total execution time: 50.90 seconds
+2025-10-04 22:41:05,117 - __main__ - INFO - Configuration used: config.yaml
+2025-10-04 22:41:05,118 - __main__ - INFO - Classification models trained for: ['Spring', 'Summer', 'Autumn', 'Winter']
+2025-10-04 22:41:05,118 - __main__ - INFO - Regression models trained: 7 models
+2025-10-04 22:41:05,118 - __main__ - INFO - Hyperparameter tuning: Disabled
+2025-10-04 22:41:05,118 - __main__ - INFO - Ensemble models: Disabled
+2025-10-04 22:41:05,119 - __main__ - INFO - Experiment tracking: Disabled
+2025-10-04 22:41:05,119 - __main__ - INFO - Artifacts saved to: /home/ansari/farah/artifacts
+2025-10-04 22:41:05,119 - config_loader - WARNING - Configuration key 'advanced.run_tests' not found, using default: False
+2025-10-04 22:52:17,299 - config_loader - INFO - Logging configured
+2025-10-04 22:52:17,300 - __main__ - INFO - Working directory: /home/ansari/farah
+2025-10-04 22:52:17,300 - config_loader - INFO - Required directories created
+2025-10-04 22:52:17,300 - __main__ - INFO - Enhanced pipeline started at 2025-10-04 22:52:17
+2025-10-04 22:52:17,300 - __main__ - INFO - === Loading and Preparing Data ===
+2025-10-04 22:52:17,300 - load_data - INFO - === Loading and Preparing Data ===
+2025-10-04 22:52:17,310 - load_data - INFO - Raw data loaded with shape: (10191, 10)
+2025-10-04 22:52:17,311 - load_data - INFO - Columns after stripping: ['Location', 'Date', 'Time', 'CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)']
+2025-10-04 22:52:17,322 - load_data - INFO - Created AQI_Category from PM2.5 values
+2025-10-04 22:52:17,324 - load_data - INFO - Data shape after cleaning: (10184, 14)
+2025-10-04 22:52:17,366 - load_data - INFO - Saved cleaned data to artifacts/data_cleaned.csv
+2025-10-04 22:52:17,366 - __main__ - INFO - Applying feature engineering...
+2025-10-04 22:52:17,366 - feature_engineering - INFO - Creating advanced features...
+2025-10-04 22:52:17,384 - feature_engineering - INFO - Enhanced features created. New shape: (10184, 53)
+2025-10-04 22:52:17,387 - feature_engineering - WARNING - Features with >50% missing values: {'Date': np.float64(61.35113904163394), 'Month': np.float64(61.35113904163394), 'Hour': np.float64(100.0), 'DayOfWeek': np.float64(61.35113904163394), 'Quarter': np.float64(61.35113904163394), 'Month_sin': np.float64(61.35113904163394), 'Month_cos': np.float64(61.35113904163394)}
+2025-10-04 22:52:17,387 - feature_engineering - INFO - New features added: {'Month_sin', 'SO2(µg/m³)_lag1', 'CO (mg/m3)_6h_mean', 'PM_combined', 'SO2(µg/m³)_lag2', 'PM2.5(µg/m³)_3h_mean', 'Quarter', 'NO2(µg/m³)_3h_mean', 'CO (mg/m3)_lag2', 'SO2(µg/m³)_3h_std', 'CO_NO2_product', 'Heat_Index', 'PM10(µg/m³)_6h_mean', 'IsWeekend', 'PM10(µg/m³)_3h_mean', 'PM25_PM10_ratio', 'PM10(µg/m³)_lag2', 'PM2.5(µg/m³)_3h_std', 'CO_NO2_ratio', 'NO2(µg/m³)_6h_mean', 'SO2(µg/m³)_3h_mean', 'PM10(µg/m³)_lag1', 'PM2.5(µg/m³)_lag1', 'PM2.5(µg/m³)_lag2', 'PM25_severity', 'SO2(µg/m³)_6h_mean', 'NO2(µg/m³)_lag2', 'SO2_NO2_ratio', 'PM2.5(µg/m³)_6h_mean', 'NO2(µg/m³)_3h_std', 'PM10(µg/m³)_3h_std', 'CO (mg/m3)_3h_std', 'PM25_trend', 'CO (mg/m3)_3h_mean', 'DayOfWeek', 'NO2(µg/m³)_lag1', 'Temp_RH_product', 'CO (mg/m3)_lag1', 'Month_cos'}
+2025-10-04 22:52:17,387 - __main__ - INFO - 
+=== Running Data Quality Analysis ===
+2025-10-04 22:52:17,387 - utils - INFO - Validating data quality...
+2025-10-04 22:52:17,403 - utils - WARNING - Data quality issues found:
+2025-10-04 22:52:17,403 - utils - WARNING -   - Columns with >50% missing values: {'Date': 61.35113904163394, 'Month': 61.35113904163394, 'Hour': 100.0, 'DayOfWeek': 61.35113904163394, 'Quarter': 61.35113904163394, 'Month_sin': 61.35113904163394, 'Month_cos': 61.35113904163394}
+2025-10-04 22:52:17,552 - __main__ - INFO - Detected 962 outliers in PM2.5(µg/m³)
+2025-10-04 22:52:17,847 - __main__ - WARNING - Data quality issues detected but continuing...
+2025-10-04 22:52:17,847 - __main__ - INFO - === Starting Enhanced Classification Pipeline ===
+2025-10-04 22:52:17,847 - __main__ - INFO - 
+--- Processing Spring ---
+2025-10-04 22:52:17,849 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 22:52:17,849 - __main__ - INFO - Spring data shape: (1075, 53)
+2025-10-04 22:52:17,849 - eda - INFO - Performing EDA for Spring
+2025-10-04 22:52:21,778 - eda - INFO - EDA completed for Spring. Plots saved to artifacts/eda/spring
+2025-10-04 22:52:21,779 - preprocess - INFO - Preprocessing data for Spring
+2025-10-04 22:52:21,779 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 22:52:21,787 - preprocess - INFO - Training samples: 688
+2025-10-04 22:52:21,787 - preprocess - INFO - Evaluation samples: 172
+2025-10-04 22:52:21,787 - preprocess - INFO - Prediction samples: 215
+2025-10-04 22:52:21,787 - models - INFO - Training classification models for Spring
+2025-10-04 22:52:21,788 - models - INFO - Training LogisticRegression...
+2025-10-04 22:52:21,805 - models - INFO - LogisticRegression - F1: 0.9388, Accuracy: 0.9360
+2025-10-04 22:52:21,805 - models - INFO - Training RandomForest...
+2025-10-04 22:52:21,959 - models - INFO - RandomForest - F1: 0.9938, Accuracy: 0.9942
+2025-10-04 22:52:21,959 - models - INFO - Training XGBoost...
+2025-10-04 22:52:22,265 - models - INFO - XGBoost - F1: 0.9920, Accuracy: 0.9942
+2025-10-04 22:52:22,265 - models - INFO - Training LightGBM...
+2025-10-04 22:52:22,302 - models - INFO - LightGBM - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 22:52:22,302 - models - INFO - Training DecisionTree...
+2025-10-04 22:52:22,311 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 22:52:22,311 - models - INFO - Training SVM...
+2025-10-04 22:52:22,345 - models - INFO - SVM - F1: 0.8947, Accuracy: 0.9012
+2025-10-04 22:52:22,345 - models - INFO - Training MLP...
+2025-10-04 22:52:22,954 - models - INFO - MLP - F1: 0.9472, Accuracy: 0.9535
+2025-10-04 22:52:22,955 - models - INFO - Best Spring classification model: LightGBM (F1: 1.0000)
+2025-10-04 22:52:22,955 - evaluate_enhanced - INFO - Generating comprehensive report for Spring classification
+2025-10-04 22:52:22,956 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/spring/comprehensive_report.md
+2025-10-04 22:52:22,956 - __main__ - INFO - 
+--- Processing Summer ---
+2025-10-04 22:52:22,958 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 22:52:22,958 - __main__ - INFO - Summer data shape: (816, 53)
+2025-10-04 22:52:22,958 - eda - INFO - Performing EDA for Summer
+2025-10-04 22:52:27,263 - eda - INFO - EDA completed for Summer. Plots saved to artifacts/eda/summer
+2025-10-04 22:52:27,263 - preprocess - INFO - Preprocessing data for Summer
+2025-10-04 22:52:27,263 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 22:52:27,272 - preprocess - INFO - Training samples: 521
+2025-10-04 22:52:27,272 - preprocess - INFO - Evaluation samples: 131
+2025-10-04 22:52:27,272 - preprocess - INFO - Prediction samples: 164
+2025-10-04 22:52:27,272 - models - INFO - Training classification models for Summer
+2025-10-04 22:52:27,273 - models - INFO - Training LogisticRegression...
+2025-10-04 22:52:27,291 - models - INFO - LogisticRegression - F1: 0.9777, Accuracy: 0.9771
+2025-10-04 22:52:27,291 - models - INFO - Training RandomForest...
+2025-10-04 22:52:27,443 - models - INFO - RandomForest - F1: 0.9708, Accuracy: 0.9771
+2025-10-04 22:52:27,443 - models - INFO - Training XGBoost...
+2025-10-04 22:52:27,483 - models - INFO - XGBoost - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 22:52:27,483 - models - INFO - Training LightGBM...
+2025-10-04 22:52:27,506 - models - INFO - LightGBM - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 22:52:27,506 - models - INFO - Training DecisionTree...
+2025-10-04 22:52:27,515 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 22:52:27,515 - models - INFO - Training SVM...
+2025-10-04 22:52:27,541 - models - INFO - SVM - F1: 0.9335, Accuracy: 0.9389
+2025-10-04 22:52:27,541 - models - INFO - Training MLP...
+2025-10-04 22:52:27,997 - models - INFO - MLP - F1: 0.9665, Accuracy: 0.9695
+2025-10-04 22:52:27,998 - models - INFO - Best Summer classification model: XGBoost (F1: 1.0000)
+2025-10-04 22:52:27,998 - evaluate_enhanced - INFO - Generating comprehensive report for Summer classification
+2025-10-04 22:52:27,999 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/summer/comprehensive_report.md
+2025-10-04 22:52:27,999 - __main__ - INFO - 
+--- Processing Autumn ---
+2025-10-04 22:52:28,001 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 22:52:28,002 - __main__ - INFO - Autumn data shape: (7228, 53)
+2025-10-04 22:52:28,002 - eda - INFO - Performing EDA for Autumn
+2025-10-04 22:52:32,176 - eda - INFO - EDA completed for Autumn. Plots saved to artifacts/eda/autumn
+2025-10-04 22:52:32,177 - preprocess - INFO - Preprocessing data for Autumn
+2025-10-04 22:52:32,177 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 22:52:32,189 - preprocess - INFO - Training samples: 4625
+2025-10-04 22:52:32,189 - preprocess - INFO - Evaluation samples: 1157
+2025-10-04 22:52:32,189 - preprocess - INFO - Prediction samples: 1446
+2025-10-04 22:52:32,190 - models - INFO - Training classification models for Autumn
+2025-10-04 22:52:32,191 - models - INFO - Training LogisticRegression...
+2025-10-04 22:52:32,232 - models - INFO - LogisticRegression - F1: 0.9842, Accuracy: 0.9836
+2025-10-04 22:52:32,233 - models - INFO - Training RandomForest...
+2025-10-04 22:52:32,578 - models - INFO - RandomForest - F1: 0.9978, Accuracy: 0.9974
+2025-10-04 22:52:32,578 - models - INFO - Training XGBoost...
+2025-10-04 22:52:32,696 - models - INFO - XGBoost - F1: 0.9978, Accuracy: 0.9974
+2025-10-04 22:52:32,696 - models - INFO - Training LightGBM...
+2025-10-04 22:52:32,744 - models - INFO - LightGBM - F1: 0.9985, Accuracy: 0.9983
+2025-10-04 22:52:32,745 - models - INFO - Training DecisionTree...
+2025-10-04 22:52:32,758 - models - INFO - DecisionTree - F1: 0.9985, Accuracy: 0.9983
+2025-10-04 22:52:32,758 - models - INFO - Training SVM...
+2025-10-04 22:52:33,296 - models - INFO - SVM - F1: 0.9615, Accuracy: 0.9611
+2025-10-04 22:52:33,296 - models - INFO - Training MLP...
+2025-10-04 22:52:36,404 - models - INFO - MLP - F1: 0.9888, Accuracy: 0.9922
+2025-10-04 22:52:36,406 - models - INFO - Best Autumn classification model: LightGBM (F1: 0.9985)
+2025-10-04 22:52:36,406 - evaluate_enhanced - INFO - Generating comprehensive report for Autumn classification
+2025-10-04 22:52:36,407 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/autumn/comprehensive_report.md
+2025-10-04 22:52:36,407 - __main__ - INFO - 
+--- Processing Winter ---
+2025-10-04 22:52:36,408 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 22:52:36,408 - __main__ - INFO - Winter data shape: (1065, 53)
+2025-10-04 22:52:36,408 - eda - INFO - Performing EDA for Winter
+2025-10-04 22:52:40,712 - eda - INFO - EDA completed for Winter. Plots saved to artifacts/eda/winter
+2025-10-04 22:52:40,712 - preprocess - INFO - Preprocessing data for Winter
+2025-10-04 22:52:40,712 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 22:52:40,720 - preprocess - INFO - Training samples: 681
+2025-10-04 22:52:40,720 - preprocess - INFO - Evaluation samples: 171
+2025-10-04 22:52:40,720 - preprocess - INFO - Prediction samples: 213
+2025-10-04 22:52:40,720 - models - INFO - Training classification models for Winter
+2025-10-04 22:52:40,721 - models - INFO - Training LogisticRegression...
+2025-10-04 22:52:40,739 - models - INFO - LogisticRegression - F1: 0.9434, Accuracy: 0.9415
+2025-10-04 22:52:40,739 - models - INFO - Training RandomForest...
+2025-10-04 22:52:40,896 - models - INFO - RandomForest - F1: 0.9736, Accuracy: 0.9766
+2025-10-04 22:52:40,896 - models - INFO - Training XGBoost...
+2025-10-04 22:52:40,940 - models - INFO - XGBoost - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 22:52:40,940 - models - INFO - Training LightGBM...
+2025-10-04 22:52:40,971 - models - INFO - LightGBM - F1: 0.9653, Accuracy: 0.9708
+2025-10-04 22:52:40,971 - models - INFO - Training DecisionTree...
+2025-10-04 22:52:40,981 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 22:52:40,981 - models - INFO - Training SVM...
+2025-10-04 22:52:41,015 - models - INFO - SVM - F1: 0.8943, Accuracy: 0.9064
+2025-10-04 22:52:41,015 - models - INFO - Training MLP...
+2025-10-04 22:52:41,600 - models - INFO - MLP - F1: 0.9659, Accuracy: 0.9708
+2025-10-04 22:52:41,601 - models - INFO - Best Winter classification model: XGBoost (F1: 1.0000)
+2025-10-04 22:52:41,602 - evaluate_enhanced - INFO - Generating comprehensive report for Winter classification
+2025-10-04 22:52:41,603 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/winter/comprehensive_report.md
+2025-10-04 22:52:41,603 - __main__ - INFO - Classification pipeline completed for 4 seasons
+2025-10-04 22:52:41,603 - __main__ - INFO - 
+=== Starting Enhanced Regression Pipeline ===
+2025-10-04 22:52:41,603 - preprocess - INFO - Preprocessing data for regression
+2025-10-04 22:52:41,603 - preprocess - INFO - Available regression features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 22:52:41,614 - preprocess - INFO - Regression training samples: 8147
+2025-10-04 22:52:41,614 - preprocess - INFO - Regression test samples: 2037
+2025-10-04 22:52:41,614 - models - INFO - Training regression models for PM2.5
+2025-10-04 22:52:41,614 - models - INFO - Training LinearRegression regression...
+2025-10-04 22:52:41,617 - models - INFO - LinearRegression - R²: 0.5983, RMSE: 11.7788
+2025-10-04 22:52:41,617 - models - INFO - Training DecisionTree regression...
+2025-10-04 22:52:41,655 - models - INFO - DecisionTree - R²: 0.6944, RMSE: 10.2745
+2025-10-04 22:52:41,655 - models - INFO - Training RandomForest regression...
+2025-10-04 22:52:43,943 - models - INFO - RandomForest - R²: 0.8396, RMSE: 7.4426
+2025-10-04 22:52:43,944 - models - INFO - Training XGBoost regression...
+2025-10-04 22:52:44,004 - models - INFO - XGBoost - R²: 0.8204, RMSE: 7.8759
+2025-10-04 22:52:44,004 - models - INFO - Training LightGBM regression...
+2025-10-04 22:52:44,051 - models - INFO - LightGBM - R²: 0.8280, RMSE: 7.7080
+2025-10-04 22:52:44,051 - models - INFO - Training SVM regression...
+2025-10-04 22:52:45,896 - models - INFO - SVM - R²: 0.7550, RMSE: 9.1984
+2025-10-04 22:52:45,896 - models - INFO - Training MLP regression...
+2025-10-04 22:52:53,342 - models - INFO - MLP - R²: 0.7937, RMSE: 8.4421
+2025-10-04 22:52:54,728 - models - INFO - Regression comparison plot saved to artifacts/models/regression/regression_comparison.png
+2025-10-04 22:52:54,729 - models - INFO - Regression model training completed
+2025-10-04 22:52:54,730 - evaluate_enhanced - INFO - Generating comprehensive report for Regression regression
+2025-10-04 22:52:54,730 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/regression/comprehensive_report.md
+2025-10-04 22:52:54,730 - __main__ - INFO - Enhanced regression pipeline completed successfully
+2025-10-04 22:52:54,730 - __main__ - INFO - 
+=== Starting Enhanced Visualization Pipeline ===
+2025-10-04 22:52:54,730 - config_loader - WARNING - Configuration key 'plotting.sample_size' not found, using default: 100
+2025-10-04 22:52:54,730 - plot_sampled_predictions - INFO - Creating regression prediction plots on random sample
+2025-10-04 22:52:54,741 - plot_sampled_predictions - INFO - Found 7 models: ['LinearRegression', 'DecisionTree', 'RandomForest', 'XGBoost', 'LightGBM', 'SVM', 'MLP']
+2025-10-04 22:52:54,744 - plot_sampled_predictions - INFO - LinearRegression R²: 0.704
+2025-10-04 22:52:54,745 - plot_sampled_predictions - INFO - DecisionTree R²: 0.996
+2025-10-04 22:52:54,811 - plot_sampled_predictions - INFO - RandomForest R²: 0.960
+2025-10-04 22:52:54,820 - plot_sampled_predictions - INFO - XGBoost R²: 0.909
+2025-10-04 22:52:54,826 - plot_sampled_predictions - INFO - LightGBM R²: 0.828
+2025-10-04 22:52:54,847 - plot_sampled_predictions - INFO - SVM R²: 0.720
+2025-10-04 22:52:54,851 - plot_sampled_predictions - INFO - MLP R²: 0.781
+2025-10-04 22:52:56,111 - plot_sampled_predictions - INFO - Sampled predictions plot saved to artifacts/models/regression/sampled_predictions_comparison.png
+2025-10-04 22:52:56,111 - compare_model_predictions - INFO - Comparing classification models for Spring
+2025-10-04 22:52:57,227 - compare_model_predictions - INFO - Classification model comparison completed for Spring
+2025-10-04 22:52:57,227 - compare_model_predictions - INFO - Comparing classification models for Summer
+2025-10-04 22:52:58,615 - compare_model_predictions - INFO - Classification model comparison completed for Summer
+2025-10-04 22:52:58,615 - compare_model_predictions - INFO - Comparing classification models for Autumn
+2025-10-04 22:52:59,722 - compare_model_predictions - INFO - Classification model comparison completed for Autumn
+2025-10-04 22:52:59,723 - compare_model_predictions - INFO - Comparing classification models for Winter
+2025-10-04 22:53:00,809 - compare_model_predictions - INFO - Classification model comparison completed for Winter
+2025-10-04 22:53:00,810 - compare_model_predictions - INFO - Comparing regression models
+2025-10-04 22:53:02,160 - compare_model_predictions - INFO - Regression model comparison completed
+2025-10-04 22:53:02,160 - evaluate_enhanced - INFO - Performing advanced seasonal model comparison
+2025-10-04 22:53:02,855 - evaluate_enhanced - INFO - Advanced seasonal comparison completed
+2025-10-04 22:53:02,855 - __main__ - INFO - Enhanced visualization pipeline completed
+2025-10-04 22:53:02,855 - __main__ - INFO - 
+=== Enhanced Pipeline Summary ===
+2025-10-04 22:53:02,855 - __main__ - INFO - Total execution time: 45.56 seconds
+2025-10-04 22:53:02,855 - __main__ - INFO - Configuration used: config.yaml
+2025-10-04 22:53:02,855 - __main__ - INFO - Classification models trained for: ['Spring', 'Summer', 'Autumn', 'Winter']
+2025-10-04 22:53:02,855 - __main__ - INFO - Regression models trained: 7 models
+2025-10-04 22:53:02,855 - __main__ - INFO - Hyperparameter tuning: Disabled
+2025-10-04 22:53:02,855 - __main__ - INFO - Ensemble models: Disabled
+2025-10-04 22:53:02,855 - __main__ - INFO - Experiment tracking: Disabled
+2025-10-04 22:53:02,855 - __main__ - INFO - Artifacts saved to: /home/ansari/farah/artifacts
+2025-10-04 22:53:02,855 - config_loader - WARNING - Configuration key 'advanced.run_tests' not found, using default: False
+2025-10-04 23:01:05,580 - config_loader - INFO - Logging configured
+2025-10-04 23:01:05,581 - __main__ - INFO - Working directory: /home/ansari/farah
+2025-10-04 23:01:05,581 - config_loader - INFO - Required directories created
+2025-10-04 23:01:05,582 - __main__ - INFO - Enhanced pipeline started at 2025-10-04 23:01:05
+2025-10-04 23:01:05,582 - __main__ - INFO - === Loading and Preparing Data ===
+2025-10-04 23:01:05,583 - load_data - INFO - === Loading and Preparing Data ===
+2025-10-04 23:01:05,594 - load_data - INFO - Raw data loaded with shape: (10191, 10)
+2025-10-04 23:01:05,594 - load_data - INFO - Columns after stripping: ['Location', 'Date', 'Time', 'CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)']
+2025-10-04 23:01:05,606 - load_data - INFO - Created AQI_Category from PM2.5 values
+2025-10-04 23:01:05,608 - load_data - INFO - Data shape after cleaning: (10184, 14)
+2025-10-04 23:01:05,651 - load_data - INFO - Saved cleaned data to artifacts/data_cleaned.csv
+2025-10-04 23:01:05,651 - __main__ - INFO - Applying feature engineering...
+2025-10-04 23:01:05,652 - feature_engineering - INFO - Creating advanced features...
+2025-10-04 23:01:05,671 - feature_engineering - INFO - Enhanced features created. New shape: (10184, 53)
+2025-10-04 23:01:05,675 - feature_engineering - WARNING - Features with >50% missing values: {'Date': np.float64(61.35113904163394), 'Month': np.float64(61.35113904163394), 'Hour': np.float64(100.0), 'DayOfWeek': np.float64(61.35113904163394), 'Quarter': np.float64(61.35113904163394), 'Month_sin': np.float64(61.35113904163394), 'Month_cos': np.float64(61.35113904163394)}
+2025-10-04 23:01:05,675 - feature_engineering - INFO - New features added: {'NO2(µg/m³)_3h_mean', 'NO2(µg/m³)_lag1', 'PM2.5(µg/m³)_lag1', 'CO (mg/m3)_3h_std', 'Temp_RH_product', 'PM25_trend', 'PM2.5(µg/m³)_3h_mean', 'PM2.5(µg/m³)_6h_mean', 'SO2(µg/m³)_6h_mean', 'CO (mg/m3)_3h_mean', 'CO (mg/m3)_lag2', 'PM25_PM10_ratio', 'NO2(µg/m³)_lag2', 'PM_combined', 'IsWeekend', 'Quarter', 'PM10(µg/m³)_3h_mean', 'SO2_NO2_ratio', 'Month_sin', 'CO_NO2_product', 'NO2(µg/m³)_6h_mean', 'SO2(µg/m³)_3h_mean', 'CO (mg/m3)_lag1', 'SO2(µg/m³)_3h_std', 'PM10(µg/m³)_lag1', 'Month_cos', 'PM10(µg/m³)_lag2', 'PM2.5(µg/m³)_3h_std', 'PM10(µg/m³)_6h_mean', 'DayOfWeek', 'SO2(µg/m³)_lag1', 'NO2(µg/m³)_3h_std', 'PM25_severity', 'Heat_Index', 'CO (mg/m3)_6h_mean', 'SO2(µg/m³)_lag2', 'PM10(µg/m³)_3h_std', 'PM2.5(µg/m³)_lag2', 'CO_NO2_ratio'}
+2025-10-04 23:01:05,676 - __main__ - INFO - 
+=== Running Data Quality Analysis ===
+2025-10-04 23:01:05,676 - utils - INFO - Validating data quality...
+2025-10-04 23:01:05,693 - utils - WARNING - Data quality issues found:
+2025-10-04 23:01:05,693 - utils - WARNING -   - Columns with >50% missing values: {'Date': 61.35113904163394, 'Month': 61.35113904163394, 'Hour': 100.0, 'DayOfWeek': 61.35113904163394, 'Quarter': 61.35113904163394, 'Month_sin': 61.35113904163394, 'Month_cos': 61.35113904163394}
+2025-10-04 23:01:05,846 - __main__ - INFO - Detected 962 outliers in PM2.5(µg/m³)
+2025-10-04 23:01:06,152 - __main__ - WARNING - Data quality issues detected but continuing...
+2025-10-04 23:01:06,154 - __main__ - INFO - === Starting Enhanced Classification Pipeline ===
+2025-10-04 23:01:06,154 - __main__ - INFO - 
+--- Processing Spring ---
+2025-10-04 23:01:06,156 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 23:01:06,156 - __main__ - INFO - Spring data shape: (1075, 53)
+2025-10-04 23:01:06,157 - eda - INFO - Performing EDA for Spring
+2025-10-04 23:01:10,952 - eda - INFO - EDA completed for Spring. Plots saved to artifacts/eda/spring
+2025-10-04 23:01:10,953 - preprocess - INFO - Preprocessing data for Spring
+2025-10-04 23:01:10,953 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 23:01:10,962 - preprocess - INFO - Training samples: 688
+2025-10-04 23:01:10,962 - preprocess - INFO - Evaluation samples: 172
+2025-10-04 23:01:10,963 - preprocess - INFO - Prediction samples: 215
+2025-10-04 23:01:10,963 - models - INFO - Training classification models for Spring
+2025-10-04 23:01:10,964 - models - INFO - Training LogisticRegression...
+2025-10-04 23:01:10,976 - models - INFO - LogisticRegression - F1: 0.9388, Accuracy: 0.9360
+2025-10-04 23:01:10,976 - models - INFO - Training RandomForest...
+2025-10-04 23:01:11,112 - models - INFO - RandomForest - F1: 0.9938, Accuracy: 0.9942
+2025-10-04 23:01:11,112 - models - INFO - Training XGBoost...
+2025-10-04 23:01:11,415 - models - INFO - XGBoost - F1: 0.9920, Accuracy: 0.9942
+2025-10-04 23:01:11,416 - models - INFO - Training LightGBM...
+2025-10-04 23:01:11,445 - models - INFO - LightGBM - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:01:11,446 - models - INFO - Training DecisionTree...
+2025-10-04 23:01:11,452 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:01:11,452 - models - INFO - Training SVM...
+2025-10-04 23:01:11,481 - models - INFO - SVM - F1: 0.8947, Accuracy: 0.9012
+2025-10-04 23:01:11,482 - models - INFO - Training MLP...
+2025-10-04 23:01:12,105 - models - INFO - MLP - F1: 0.9472, Accuracy: 0.9535
+2025-10-04 23:01:12,107 - models - INFO - Best model for Spring: LightGBM with F1 1.0000
+2025-10-04 23:01:12,108 - evaluate_enhanced - INFO - Generating comprehensive report for Spring classification
+2025-10-04 23:01:12,109 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/spring/comprehensive_report.md
+2025-10-04 23:01:12,109 - __main__ - INFO - 
+--- Processing Summer ---
+2025-10-04 23:01:12,112 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 23:01:12,113 - __main__ - INFO - Summer data shape: (816, 53)
+2025-10-04 23:01:12,113 - eda - INFO - Performing EDA for Summer
+2025-10-04 23:01:13,323 - config_loader - INFO - Logging configured
+2025-10-04 23:01:13,323 - __main__ - INFO - Working directory: /home/ansari/farah
+2025-10-04 23:01:13,323 - config_loader - INFO - Required directories created
+2025-10-04 23:01:13,323 - __main__ - INFO - Enhanced pipeline started at 2025-10-04 23:01:13
+2025-10-04 23:01:13,323 - __main__ - INFO - === Loading and Preparing Data ===
+2025-10-04 23:01:13,323 - load_data - INFO - === Loading and Preparing Data ===
+2025-10-04 23:01:13,335 - load_data - INFO - Raw data loaded with shape: (10191, 10)
+2025-10-04 23:01:13,335 - load_data - INFO - Columns after stripping: ['Location', 'Date', 'Time', 'CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)']
+2025-10-04 23:01:13,347 - load_data - INFO - Created AQI_Category from PM2.5 values
+2025-10-04 23:01:13,349 - load_data - INFO - Data shape after cleaning: (10184, 14)
+2025-10-04 23:01:13,395 - load_data - INFO - Saved cleaned data to artifacts/data_cleaned.csv
+2025-10-04 23:01:13,395 - __main__ - INFO - Applying feature engineering...
+2025-10-04 23:01:13,395 - feature_engineering - INFO - Creating advanced features...
+2025-10-04 23:01:13,416 - feature_engineering - INFO - Enhanced features created. New shape: (10184, 53)
+2025-10-04 23:01:13,419 - feature_engineering - WARNING - Features with >50% missing values: {'Date': np.float64(61.35113904163394), 'Month': np.float64(61.35113904163394), 'Hour': np.float64(100.0), 'DayOfWeek': np.float64(61.35113904163394), 'Quarter': np.float64(61.35113904163394), 'Month_sin': np.float64(61.35113904163394), 'Month_cos': np.float64(61.35113904163394)}
+2025-10-04 23:01:13,419 - feature_engineering - INFO - New features added: {'Month_cos', 'NO2(µg/m³)_3h_mean', 'SO2_NO2_ratio', 'PM2.5(µg/m³)_lag1', 'PM10(µg/m³)_3h_std', 'CO (mg/m3)_6h_mean', 'NO2(µg/m³)_lag1', 'SO2(µg/m³)_lag2', 'SO2(µg/m³)_3h_mean', 'Month_sin', 'PM25_trend', 'SO2(µg/m³)_6h_mean', 'CO (mg/m3)_lag2', 'NO2(µg/m³)_lag2', 'SO2(µg/m³)_3h_std', 'PM2.5(µg/m³)_lag2', 'CO (mg/m3)_3h_mean', 'PM10(µg/m³)_lag1', 'PM25_severity', 'CO (mg/m3)_lag1', 'CO_NO2_ratio', 'CO (mg/m3)_3h_std', 'SO2(µg/m³)_lag1', 'DayOfWeek', 'NO2(µg/m³)_6h_mean', 'PM2.5(µg/m³)_6h_mean', 'PM2.5(µg/m³)_3h_mean', 'PM25_PM10_ratio', 'PM10(µg/m³)_3h_mean', 'PM10(µg/m³)_lag2', 'Heat_Index', 'Temp_RH_product', 'CO_NO2_product', 'PM2.5(µg/m³)_3h_std', 'Quarter', 'IsWeekend', 'PM10(µg/m³)_6h_mean', 'NO2(µg/m³)_3h_std', 'PM_combined'}
+2025-10-04 23:01:13,419 - __main__ - INFO - 
+=== Running Data Quality Analysis ===
+2025-10-04 23:01:13,419 - utils - INFO - Validating data quality...
+2025-10-04 23:01:13,436 - utils - WARNING - Data quality issues found:
+2025-10-04 23:01:13,436 - utils - WARNING -   - Columns with >50% missing values: {'Date': 61.35113904163394, 'Month': 61.35113904163394, 'Hour': 100.0, 'DayOfWeek': 61.35113904163394, 'Quarter': 61.35113904163394, 'Month_sin': 61.35113904163394, 'Month_cos': 61.35113904163394}
+2025-10-04 23:01:13,592 - __main__ - INFO - Detected 962 outliers in PM2.5(µg/m³)
+2025-10-04 23:01:13,910 - __main__ - WARNING - Data quality issues detected but continuing...
+2025-10-04 23:01:13,910 - __main__ - INFO - === Starting Enhanced Classification Pipeline ===
+2025-10-04 23:01:13,910 - __main__ - INFO - 
+--- Processing Spring ---
+2025-10-04 23:01:13,912 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 23:01:13,912 - __main__ - INFO - Spring data shape: (1075, 53)
+2025-10-04 23:01:13,912 - eda - INFO - Performing EDA for Spring
+2025-10-04 23:01:17,082 - eda - INFO - EDA completed for Summer. Plots saved to artifacts/eda/summer
+2025-10-04 23:01:17,083 - preprocess - INFO - Preprocessing data for Summer
+2025-10-04 23:01:17,083 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 23:01:17,092 - preprocess - INFO - Training samples: 521
+2025-10-04 23:01:17,092 - preprocess - INFO - Evaluation samples: 131
+2025-10-04 23:01:17,092 - preprocess - INFO - Prediction samples: 164
+2025-10-04 23:01:17,093 - models - INFO - Training classification models for Summer
+2025-10-04 23:01:17,094 - models - INFO - Training LogisticRegression...
+2025-10-04 23:01:17,107 - models - INFO - LogisticRegression - F1: 0.9777, Accuracy: 0.9771
+2025-10-04 23:01:17,107 - models - INFO - Training RandomForest...
+2025-10-04 23:01:17,257 - models - INFO - RandomForest - F1: 0.9708, Accuracy: 0.9771
+2025-10-04 23:01:17,257 - models - INFO - Training XGBoost...
+2025-10-04 23:01:17,315 - models - INFO - XGBoost - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:01:17,318 - models - INFO - Training LightGBM...
+2025-10-04 23:01:17,338 - models - INFO - LightGBM - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:01:17,339 - models - INFO - Training DecisionTree...
+2025-10-04 23:01:17,345 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:01:17,345 - models - INFO - Training SVM...
+2025-10-04 23:01:17,369 - models - INFO - SVM - F1: 0.9335, Accuracy: 0.9389
+2025-10-04 23:01:17,369 - models - INFO - Training MLP...
+2025-10-04 23:01:17,833 - models - INFO - MLP - F1: 0.9665, Accuracy: 0.9695
+2025-10-04 23:01:17,834 - models - INFO - Best model for Summer: XGBoost with F1 1.0000
+2025-10-04 23:01:17,835 - evaluate_enhanced - INFO - Generating comprehensive report for Summer classification
+2025-10-04 23:01:17,835 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/summer/comprehensive_report.md
+2025-10-04 23:01:17,836 - __main__ - INFO - 
+--- Processing Autumn ---
+2025-10-04 23:01:17,839 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 23:01:17,839 - __main__ - INFO - Autumn data shape: (7228, 53)
+2025-10-04 23:01:17,839 - eda - INFO - Performing EDA for Autumn
+2025-10-04 23:01:18,111 - eda - INFO - EDA completed for Spring. Plots saved to artifacts/eda/spring
+2025-10-04 23:01:18,111 - preprocess - INFO - Preprocessing data for Spring
+2025-10-04 23:01:18,111 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 23:01:18,122 - preprocess - INFO - Training samples: 688
+2025-10-04 23:01:18,122 - preprocess - INFO - Evaluation samples: 172
+2025-10-04 23:01:18,122 - preprocess - INFO - Prediction samples: 215
+2025-10-04 23:01:18,122 - models - INFO - Training classification models for Spring
+2025-10-04 23:01:18,123 - models - INFO - Training LogisticRegression...
+2025-10-04 23:01:18,135 - models - INFO - LogisticRegression - F1: 0.9388, Accuracy: 0.9360
+2025-10-04 23:01:18,135 - models - INFO - Training RandomForest...
+2025-10-04 23:01:18,273 - models - INFO - RandomForest - F1: 0.9938, Accuracy: 0.9942
+2025-10-04 23:01:18,273 - models - INFO - Training XGBoost...
+2025-10-04 23:01:18,603 - models - INFO - XGBoost - F1: 0.9920, Accuracy: 0.9942
+2025-10-04 23:01:18,603 - models - INFO - Training LightGBM...
+2025-10-04 23:01:18,638 - models - INFO - LightGBM - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:01:18,638 - models - INFO - Training DecisionTree...
+2025-10-04 23:01:18,645 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:01:18,645 - models - INFO - Training SVM...
+2025-10-04 23:01:18,676 - models - INFO - SVM - F1: 0.8947, Accuracy: 0.9012
+2025-10-04 23:01:18,676 - models - INFO - Training MLP...
+2025-10-04 23:01:19,276 - models - INFO - MLP - F1: 0.9472, Accuracy: 0.9535
+2025-10-04 23:01:19,277 - models - INFO - Best model for Spring: LightGBM with F1 1.0000
+2025-10-04 23:01:19,278 - evaluate_enhanced - INFO - Generating comprehensive report for Spring classification
+2025-10-04 23:01:19,278 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/spring/comprehensive_report.md
+2025-10-04 23:01:19,278 - __main__ - INFO - 
+--- Processing Summer ---
+2025-10-04 23:01:19,280 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 23:01:19,280 - __main__ - INFO - Summer data shape: (816, 53)
+2025-10-04 23:01:19,280 - eda - INFO - Performing EDA for Summer
+2025-10-04 23:01:22,940 - eda - INFO - EDA completed for Autumn. Plots saved to artifacts/eda/autumn
+2025-10-04 23:01:22,940 - preprocess - INFO - Preprocessing data for Autumn
+2025-10-04 23:01:22,941 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 23:01:22,956 - preprocess - INFO - Training samples: 4625
+2025-10-04 23:01:22,956 - preprocess - INFO - Evaluation samples: 1157
+2025-10-04 23:01:22,956 - preprocess - INFO - Prediction samples: 1446
+2025-10-04 23:01:22,957 - models - INFO - Training classification models for Autumn
+2025-10-04 23:01:22,958 - models - INFO - Training LogisticRegression...
+2025-10-04 23:01:22,997 - models - INFO - LogisticRegression - F1: 0.9842, Accuracy: 0.9836
+2025-10-04 23:01:22,997 - models - INFO - Training RandomForest...
+2025-10-04 23:01:23,342 - models - INFO - RandomForest - F1: 0.9978, Accuracy: 0.9974
+2025-10-04 23:01:23,342 - models - INFO - Training XGBoost...
+2025-10-04 23:01:23,600 - eda - INFO - EDA completed for Summer. Plots saved to artifacts/eda/summer
+2025-10-04 23:01:23,600 - preprocess - INFO - Preprocessing data for Summer
+2025-10-04 23:01:23,600 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 23:01:23,611 - preprocess - INFO - Training samples: 521
+2025-10-04 23:01:23,611 - preprocess - INFO - Evaluation samples: 131
+2025-10-04 23:01:23,611 - preprocess - INFO - Prediction samples: 164
+2025-10-04 23:01:23,611 - models - INFO - Training classification models for Summer
+2025-10-04 23:01:23,612 - models - INFO - Training LogisticRegression...
+2025-10-04 23:01:23,757 - models - INFO - LogisticRegression - F1: 0.9777, Accuracy: 0.9771
+2025-10-04 23:01:23,757 - models - INFO - Training RandomForest...
+2025-10-04 23:01:23,926 - models - INFO - RandomForest - F1: 0.9708, Accuracy: 0.9771
+2025-10-04 23:01:23,926 - models - INFO - Training XGBoost...
+2025-10-04 23:01:25,792 - __main__ - INFO - Pipeline interrupted by user
+2025-10-04 23:01:25,845 - models - INFO - XGBoost - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:01:25,845 - models - INFO - Training LightGBM...
+2025-10-04 23:01:25,866 - models - INFO - LightGBM - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:01:25,867 - models - INFO - Training DecisionTree...
+2025-10-04 23:01:25,872 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:01:25,872 - models - INFO - Training SVM...
+2025-10-04 23:01:25,895 - models - INFO - SVM - F1: 0.9335, Accuracy: 0.9389
+2025-10-04 23:01:25,896 - models - INFO - Training MLP...
+2025-10-04 23:01:26,357 - models - INFO - MLP - F1: 0.9665, Accuracy: 0.9695
+2025-10-04 23:01:26,358 - models - INFO - Best model for Summer: XGBoost with F1 1.0000
+2025-10-04 23:01:26,358 - evaluate_enhanced - INFO - Generating comprehensive report for Summer classification
+2025-10-04 23:01:26,359 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/summer/comprehensive_report.md
+2025-10-04 23:01:26,359 - __main__ - INFO - 
+--- Processing Autumn ---
+2025-10-04 23:01:26,361 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 23:01:26,361 - __main__ - INFO - Autumn data shape: (7228, 53)
+2025-10-04 23:01:26,361 - eda - INFO - Performing EDA for Autumn
+2025-10-04 23:01:30,694 - eda - INFO - EDA completed for Autumn. Plots saved to artifacts/eda/autumn
+2025-10-04 23:01:30,694 - preprocess - INFO - Preprocessing data for Autumn
+2025-10-04 23:01:30,695 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 23:01:30,711 - preprocess - INFO - Training samples: 4625
+2025-10-04 23:01:30,711 - preprocess - INFO - Evaluation samples: 1157
+2025-10-04 23:01:30,711 - preprocess - INFO - Prediction samples: 1446
+2025-10-04 23:01:30,711 - models - INFO - Training classification models for Autumn
+2025-10-04 23:01:30,712 - models - INFO - Training LogisticRegression...
+2025-10-04 23:01:30,744 - models - INFO - LogisticRegression - F1: 0.9842, Accuracy: 0.9836
+2025-10-04 23:01:30,744 - models - INFO - Training RandomForest...
+2025-10-04 23:01:31,060 - models - INFO - RandomForest - F1: 0.9978, Accuracy: 0.9974
+2025-10-04 23:01:31,060 - models - INFO - Training XGBoost...
+2025-10-04 23:01:31,128 - models - INFO - XGBoost - F1: 0.9978, Accuracy: 0.9974
+2025-10-04 23:01:31,128 - models - INFO - Training LightGBM...
+2025-10-04 23:01:31,172 - models - INFO - LightGBM - F1: 0.9985, Accuracy: 0.9983
+2025-10-04 23:01:31,172 - models - INFO - Training DecisionTree...
+2025-10-04 23:01:31,181 - models - INFO - DecisionTree - F1: 0.9985, Accuracy: 0.9983
+2025-10-04 23:01:31,182 - models - INFO - Training SVM...
+2025-10-04 23:01:31,694 - models - INFO - SVM - F1: 0.9615, Accuracy: 0.9611
+2025-10-04 23:01:31,694 - models - INFO - Training MLP...
+2025-10-04 23:01:48,175 - config_loader - INFO - Logging configured
+2025-10-04 23:01:48,175 - __main__ - INFO - Working directory: /home/ansari/farah
+2025-10-04 23:01:48,176 - config_loader - INFO - Required directories created
+2025-10-04 23:01:48,176 - __main__ - INFO - Enhanced pipeline started at 2025-10-04 23:01:48
+2025-10-04 23:01:48,176 - __main__ - INFO - === Loading and Preparing Data ===
+2025-10-04 23:01:48,176 - load_data - INFO - === Loading and Preparing Data ===
+2025-10-04 23:01:48,190 - load_data - INFO - Raw data loaded with shape: (10191, 10)
+2025-10-04 23:01:48,191 - load_data - INFO - Columns after stripping: ['Location', 'Date', 'Time', 'CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)']
+2025-10-04 23:01:48,203 - load_data - INFO - Created AQI_Category from PM2.5 values
+2025-10-04 23:01:48,206 - load_data - INFO - Data shape after cleaning: (10184, 14)
+2025-10-04 23:01:48,252 - load_data - INFO - Saved cleaned data to artifacts/data_cleaned.csv
+2025-10-04 23:01:48,252 - __main__ - INFO - Applying feature engineering...
+2025-10-04 23:01:48,252 - feature_engineering - INFO - Creating advanced features...
+2025-10-04 23:01:48,272 - feature_engineering - INFO - Enhanced features created. New shape: (10184, 53)
+2025-10-04 23:01:48,275 - feature_engineering - WARNING - Features with >50% missing values: {'Date': np.float64(61.35113904163394), 'Month': np.float64(61.35113904163394), 'Hour': np.float64(100.0), 'DayOfWeek': np.float64(61.35113904163394), 'Quarter': np.float64(61.35113904163394), 'Month_sin': np.float64(61.35113904163394), 'Month_cos': np.float64(61.35113904163394)}
+2025-10-04 23:01:48,275 - feature_engineering - INFO - New features added: {'PM2.5(µg/m³)_lag2', 'NO2(µg/m³)_lag1', 'PM25_PM10_ratio', 'Heat_Index', 'PM10(µg/m³)_6h_mean', 'PM_combined', 'PM10(µg/m³)_lag1', 'DayOfWeek', 'Temp_RH_product', 'PM25_severity', 'SO2(µg/m³)_6h_mean', 'PM25_trend', 'SO2_NO2_ratio', 'PM2.5(µg/m³)_6h_mean', 'PM2.5(µg/m³)_3h_mean', 'NO2(µg/m³)_lag2', 'PM2.5(µg/m³)_lag1', 'Month_sin', 'Quarter', 'NO2(µg/m³)_3h_mean', 'NO2(µg/m³)_6h_mean', 'SO2(µg/m³)_lag1', 'NO2(µg/m³)_3h_std', 'SO2(µg/m³)_lag2', 'SO2(µg/m³)_3h_std', 'CO (mg/m3)_lag2', 'IsWeekend', 'PM10(µg/m³)_lag2', 'CO (mg/m3)_3h_std', 'Month_cos', 'PM10(µg/m³)_3h_std', 'PM10(µg/m³)_3h_mean', 'CO (mg/m3)_lag1', 'CO_NO2_ratio', 'CO_NO2_product', 'PM2.5(µg/m³)_3h_std', 'SO2(µg/m³)_3h_mean', 'CO (mg/m3)_3h_mean', 'CO (mg/m3)_6h_mean'}
+2025-10-04 23:01:48,275 - __main__ - INFO - 
+=== Running Data Quality Analysis ===
+2025-10-04 23:01:48,275 - utils - INFO - Validating data quality...
+2025-10-04 23:01:48,292 - utils - WARNING - Data quality issues found:
+2025-10-04 23:01:48,292 - utils - WARNING -   - Columns with >50% missing values: {'Date': 61.35113904163394, 'Month': 61.35113904163394, 'Hour': 100.0, 'DayOfWeek': 61.35113904163394, 'Quarter': 61.35113904163394, 'Month_sin': 61.35113904163394, 'Month_cos': 61.35113904163394}
+2025-10-04 23:01:48,444 - __main__ - INFO - Detected 962 outliers in PM2.5(µg/m³)
+2025-10-04 23:01:48,746 - __main__ - WARNING - Data quality issues detected but continuing...
+2025-10-04 23:01:48,746 - __main__ - INFO - === Starting Enhanced Classification Pipeline ===
+2025-10-04 23:01:48,746 - __main__ - INFO - 
+--- Processing Spring ---
+2025-10-04 23:01:48,748 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 23:01:48,748 - __main__ - INFO - Spring data shape: (1075, 53)
+2025-10-04 23:01:48,748 - eda - INFO - Performing EDA for Spring
+2025-10-04 23:01:52,692 - eda - INFO - EDA completed for Spring. Plots saved to artifacts/eda/spring
+2025-10-04 23:01:52,693 - preprocess - INFO - Preprocessing data for Spring
+2025-10-04 23:01:52,693 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 23:01:52,701 - preprocess - INFO - Training samples: 688
+2025-10-04 23:01:52,702 - preprocess - INFO - Evaluation samples: 172
+2025-10-04 23:01:52,702 - preprocess - INFO - Prediction samples: 215
+2025-10-04 23:01:52,702 - models - INFO - Training classification models for Spring
+2025-10-04 23:01:52,702 - models - INFO - Training LogisticRegression...
+2025-10-04 23:01:52,715 - models - INFO - LogisticRegression - F1: 0.9388, Accuracy: 0.9360
+2025-10-04 23:01:52,715 - models - INFO - Training RandomForest...
+2025-10-04 23:01:52,863 - models - INFO - RandomForest - F1: 0.9938, Accuracy: 0.9942
+2025-10-04 23:01:52,863 - models - INFO - Training XGBoost...
+2025-10-04 23:01:53,056 - models - INFO - XGBoost - F1: 0.9920, Accuracy: 0.9942
+2025-10-04 23:01:53,056 - models - INFO - Training LightGBM...
+2025-10-04 23:01:53,086 - models - INFO - LightGBM - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:01:53,086 - models - INFO - Training DecisionTree...
+2025-10-04 23:01:53,092 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:01:53,092 - models - INFO - Training SVM...
+2025-10-04 23:01:53,122 - models - INFO - SVM - F1: 0.8947, Accuracy: 0.9012
+2025-10-04 23:01:53,122 - models - INFO - Training MLP...
+2025-10-04 23:01:53,704 - models - INFO - MLP - F1: 0.9472, Accuracy: 0.9535
+2025-10-04 23:01:53,705 - models - INFO - Best model for Spring: LightGBM with F1 1.0000
+2025-10-04 23:01:53,705 - evaluate_enhanced - INFO - Generating comprehensive report for Spring classification
+2025-10-04 23:01:53,705 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/spring/comprehensive_report.md
+2025-10-04 23:01:53,705 - __main__ - INFO - 
+--- Processing Summer ---
+2025-10-04 23:01:53,707 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 23:01:53,707 - __main__ - INFO - Summer data shape: (816, 53)
+2025-10-04 23:01:53,707 - eda - INFO - Performing EDA for Summer
+2025-10-04 23:01:57,645 - eda - INFO - EDA completed for Summer. Plots saved to artifacts/eda/summer
+2025-10-04 23:01:57,645 - preprocess - INFO - Preprocessing data for Summer
+2025-10-04 23:01:57,645 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 23:01:57,653 - preprocess - INFO - Training samples: 521
+2025-10-04 23:01:57,654 - preprocess - INFO - Evaluation samples: 131
+2025-10-04 23:01:57,654 - preprocess - INFO - Prediction samples: 164
+2025-10-04 23:01:57,654 - models - INFO - Training classification models for Summer
+2025-10-04 23:01:57,654 - models - INFO - Training LogisticRegression...
+2025-10-04 23:01:57,666 - models - INFO - LogisticRegression - F1: 0.9777, Accuracy: 0.9771
+2025-10-04 23:01:57,666 - models - INFO - Training RandomForest...
+2025-10-04 23:01:57,809 - models - INFO - RandomForest - F1: 0.9708, Accuracy: 0.9771
+2025-10-04 23:01:57,810 - models - INFO - Training XGBoost...
+2025-10-04 23:01:57,846 - models - INFO - XGBoost - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:01:57,846 - models - INFO - Training LightGBM...
+2025-10-04 23:01:57,868 - models - INFO - LightGBM - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:01:57,868 - models - INFO - Training DecisionTree...
+2025-10-04 23:01:57,873 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:01:57,873 - models - INFO - Training SVM...
+2025-10-04 23:01:57,897 - models - INFO - SVM - F1: 0.9335, Accuracy: 0.9389
+2025-10-04 23:01:57,897 - models - INFO - Training MLP...
+2025-10-04 23:01:58,342 - models - INFO - MLP - F1: 0.9665, Accuracy: 0.9695
+2025-10-04 23:01:58,343 - models - INFO - Best model for Summer: XGBoost with F1 1.0000
+2025-10-04 23:01:58,343 - evaluate_enhanced - INFO - Generating comprehensive report for Summer classification
+2025-10-04 23:01:58,344 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/summer/comprehensive_report.md
+2025-10-04 23:01:58,344 - __main__ - INFO - 
+--- Processing Autumn ---
+2025-10-04 23:01:58,346 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 23:01:58,346 - __main__ - INFO - Autumn data shape: (7228, 53)
+2025-10-04 23:01:58,346 - eda - INFO - Performing EDA for Autumn
+2025-10-04 23:02:02,335 - eda - INFO - EDA completed for Autumn. Plots saved to artifacts/eda/autumn
+2025-10-04 23:02:02,335 - preprocess - INFO - Preprocessing data for Autumn
+2025-10-04 23:02:02,335 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 23:02:02,351 - preprocess - INFO - Training samples: 4625
+2025-10-04 23:02:02,351 - preprocess - INFO - Evaluation samples: 1157
+2025-10-04 23:02:02,351 - preprocess - INFO - Prediction samples: 1446
+2025-10-04 23:02:02,351 - models - INFO - Training classification models for Autumn
+2025-10-04 23:02:02,352 - models - INFO - Training LogisticRegression...
+2025-10-04 23:02:02,384 - models - INFO - LogisticRegression - F1: 0.9842, Accuracy: 0.9836
+2025-10-04 23:02:02,384 - models - INFO - Training RandomForest...
+2025-10-04 23:02:02,697 - models - INFO - RandomForest - F1: 0.9978, Accuracy: 0.9974
+2025-10-04 23:02:02,697 - models - INFO - Training XGBoost...
+2025-10-04 23:02:02,766 - models - INFO - XGBoost - F1: 0.9978, Accuracy: 0.9974
+2025-10-04 23:02:02,766 - models - INFO - Training LightGBM...
+2025-10-04 23:02:02,814 - models - INFO - LightGBM - F1: 0.9985, Accuracy: 0.9983
+2025-10-04 23:02:02,814 - models - INFO - Training DecisionTree...
+2025-10-04 23:02:02,824 - models - INFO - DecisionTree - F1: 0.9985, Accuracy: 0.9983
+2025-10-04 23:02:02,824 - models - INFO - Training SVM...
+2025-10-04 23:02:03,337 - models - INFO - SVM - F1: 0.9615, Accuracy: 0.9611
+2025-10-04 23:02:03,337 - models - INFO - Training MLP...
+2025-10-04 23:02:06,179 - models - INFO - MLP - F1: 0.9888, Accuracy: 0.9922
+2025-10-04 23:02:06,180 - models - INFO - Best model for Autumn: LightGBM with F1 0.9985
+2025-10-04 23:02:06,181 - evaluate_enhanced - INFO - Generating comprehensive report for Autumn classification
+2025-10-04 23:02:06,181 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/autumn/comprehensive_report.md
+2025-10-04 23:02:06,181 - __main__ - INFO - 
+--- Processing Winter ---
+2025-10-04 23:02:06,182 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 23:02:06,182 - __main__ - INFO - Winter data shape: (1065, 53)
+2025-10-04 23:02:06,182 - eda - INFO - Performing EDA for Winter
+2025-10-04 23:02:10,179 - eda - INFO - EDA completed for Winter. Plots saved to artifacts/eda/winter
+2025-10-04 23:02:10,179 - preprocess - INFO - Preprocessing data for Winter
+2025-10-04 23:02:10,179 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 23:02:10,188 - preprocess - INFO - Training samples: 681
+2025-10-04 23:02:10,188 - preprocess - INFO - Evaluation samples: 171
+2025-10-04 23:02:10,188 - preprocess - INFO - Prediction samples: 213
+2025-10-04 23:02:10,188 - models - INFO - Training classification models for Winter
+2025-10-04 23:02:10,189 - models - INFO - Training LogisticRegression...
+2025-10-04 23:02:10,201 - models - INFO - LogisticRegression - F1: 0.9434, Accuracy: 0.9415
+2025-10-04 23:02:10,201 - models - INFO - Training RandomForest...
+2025-10-04 23:02:10,337 - models - INFO - RandomForest - F1: 0.9736, Accuracy: 0.9766
+2025-10-04 23:02:10,337 - models - INFO - Training XGBoost...
+2025-10-04 23:02:10,380 - models - INFO - XGBoost - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:02:10,380 - models - INFO - Training LightGBM...
+2025-10-04 23:02:10,411 - models - INFO - LightGBM - F1: 0.9653, Accuracy: 0.9708
+2025-10-04 23:02:10,411 - models - INFO - Training DecisionTree...
+2025-10-04 23:02:10,416 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-04 23:02:10,416 - models - INFO - Training SVM...
+2025-10-04 23:02:10,447 - models - INFO - SVM - F1: 0.8943, Accuracy: 0.9064
+2025-10-04 23:02:10,447 - models - INFO - Training MLP...
+2025-10-04 23:02:11,023 - models - INFO - MLP - F1: 0.9659, Accuracy: 0.9708
+2025-10-04 23:02:11,024 - models - INFO - Best model for Winter: XGBoost with F1 1.0000
+2025-10-04 23:02:11,025 - evaluate_enhanced - INFO - Generating comprehensive report for Winter classification
+2025-10-04 23:02:11,025 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/winter/comprehensive_report.md
+2025-10-04 23:02:11,025 - __main__ - INFO - Classification pipeline completed for 4 seasons
+2025-10-04 23:02:11,026 - __main__ - INFO - 
+=== Starting Enhanced Regression Pipeline ===
+2025-10-04 23:02:11,026 - preprocess - INFO - Preprocessing data for regression
+2025-10-04 23:02:11,026 - preprocess - INFO - Available regression features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 23:02:11,037 - preprocess - INFO - Regression training samples: 8147
+2025-10-04 23:02:11,037 - preprocess - INFO - Regression test samples: 2037
+2025-10-04 23:02:11,038 - models - INFO - Training regression models
+2025-10-04 23:02:11,038 - models - INFO - Training LinearRegression...
+2025-10-04 23:02:11,040 - models - INFO - LinearRegression - R2: 0.5983, RMSE: 11.7788
+2025-10-04 23:02:11,040 - models - INFO - Training DecisionTree...
+2025-10-04 23:02:11,077 - models - INFO - DecisionTree - R2: 0.6944, RMSE: 10.2745
+2025-10-04 23:02:11,078 - models - INFO - Training RandomForest...
+2025-10-04 23:02:13,280 - models - INFO - RandomForest - R2: 0.8396, RMSE: 7.4426
+2025-10-04 23:02:13,280 - models - INFO - Training XGBoost...
+2025-10-04 23:02:13,396 - models - INFO - XGBoost - R2: 0.8204, RMSE: 7.8759
+2025-10-04 23:02:13,396 - models - INFO - Training LightGBM...
+2025-10-04 23:02:13,442 - models - INFO - LightGBM - R2: 0.8280, RMSE: 7.7080
+2025-10-04 23:02:13,442 - models - INFO - Training SVM...
+2025-10-04 23:02:15,267 - models - INFO - SVM - R2: 0.7550, RMSE: 9.1984
+2025-10-04 23:02:15,267 - models - INFO - Training MLP...
+2025-10-04 23:02:22,521 - models - INFO - MLP - R2: 0.7937, RMSE: 8.4421
+2025-10-04 23:02:23,017 - models - INFO - Best regression model: RandomForest with R2 0.8396
+2025-10-04 23:02:23,017 - evaluate_enhanced - INFO - Generating comprehensive report for Regression regression
+2025-10-04 23:02:23,017 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/regression/comprehensive_report.md
+2025-10-04 23:02:23,018 - __main__ - INFO - Enhanced regression pipeline completed successfully
+2025-10-04 23:02:23,018 - __main__ - INFO - 
+=== Starting Enhanced Visualization Pipeline ===
+2025-10-04 23:02:23,018 - config_loader - WARNING - Configuration key 'plotting.sample_size' not found, using default: 100
+2025-10-04 23:02:23,018 - plot_sampled_predictions - INFO - Creating regression prediction plots on random sample
+2025-10-04 23:02:23,030 - plot_sampled_predictions - INFO - Found 7 models: ['LinearRegression', 'DecisionTree', 'RandomForest', 'XGBoost', 'LightGBM', 'SVM', 'MLP']
+2025-10-04 23:02:23,032 - plot_sampled_predictions - INFO - LinearRegression R²: 0.704
+2025-10-04 23:02:23,034 - plot_sampled_predictions - INFO - DecisionTree R²: 0.996
+2025-10-04 23:02:23,119 - plot_sampled_predictions - INFO - RandomForest R²: 0.960
+2025-10-04 23:02:23,132 - plot_sampled_predictions - INFO - XGBoost R²: 0.909
+2025-10-04 23:02:23,136 - plot_sampled_predictions - INFO - LightGBM R²: 0.828
+2025-10-04 23:02:23,158 - plot_sampled_predictions - INFO - SVM R²: 0.720
+2025-10-04 23:02:23,161 - plot_sampled_predictions - INFO - MLP R²: 0.781
+2025-10-04 23:02:24,425 - plot_sampled_predictions - INFO - Sampled predictions plot saved to artifacts/models/regression/sampled_predictions_comparison.png
+2025-10-04 23:02:24,426 - compare_model_predictions - INFO - Comparing classification models for Spring
+2025-10-04 23:02:25,509 - compare_model_predictions - INFO - Classification model comparison completed for Spring
+2025-10-04 23:02:25,509 - compare_model_predictions - INFO - Comparing classification models for Summer
+2025-10-04 23:02:26,877 - compare_model_predictions - INFO - Classification model comparison completed for Summer
+2025-10-04 23:02:26,878 - compare_model_predictions - INFO - Comparing classification models for Autumn
+2025-10-04 23:02:27,974 - compare_model_predictions - INFO - Classification model comparison completed for Autumn
+2025-10-04 23:02:27,974 - compare_model_predictions - INFO - Comparing classification models for Winter
+2025-10-04 23:02:29,057 - compare_model_predictions - INFO - Classification model comparison completed for Winter
+2025-10-04 23:02:29,057 - compare_model_predictions - INFO - Comparing regression models
+2025-10-04 23:02:30,410 - compare_model_predictions - INFO - Regression model comparison completed
+2025-10-04 23:02:30,410 - evaluate_enhanced - INFO - Performing advanced seasonal model comparison
+2025-10-04 23:02:31,122 - evaluate_enhanced - INFO - Advanced seasonal comparison completed
+2025-10-04 23:02:31,122 - __main__ - INFO - Enhanced visualization pipeline completed
+2025-10-04 23:02:31,122 - __main__ - INFO - 
+=== Enhanced Pipeline Summary ===
+2025-10-04 23:02:31,122 - __main__ - INFO - Total execution time: 42.95 seconds
+2025-10-04 23:02:31,122 - __main__ - INFO - Configuration used: config.yaml
+2025-10-04 23:02:31,123 - __main__ - INFO - Classification models trained for: ['Spring', 'Summer', 'Autumn', 'Winter']
+2025-10-04 23:02:31,123 - __main__ - INFO - Regression models trained: 3 models
+2025-10-04 23:02:31,123 - __main__ - INFO - Hyperparameter tuning: Disabled
+2025-10-04 23:02:31,123 - __main__ - INFO - Ensemble models: Disabled
+2025-10-04 23:02:31,123 - __main__ - INFO - Experiment tracking: Disabled
+2025-10-04 23:02:31,123 - __main__ - INFO - Artifacts saved to: /home/ansari/farah/artifacts
+2025-10-04 23:02:31,123 - config_loader - WARNING - Configuration key 'advanced.run_tests' not found, using default: False
+2025-10-04 23:03:43,822 - config_loader - INFO - Logging configured
+2025-10-04 23:03:43,822 - __main__ - INFO - Working directory: /home/ansari/farah
+2025-10-04 23:03:43,822 - config_loader - INFO - Required directories created
+2025-10-04 23:03:43,822 - __main__ - INFO - Enhanced pipeline started at 2025-10-04 23:03:43
+2025-10-04 23:03:43,822 - __main__ - INFO - === Loading and Preparing Data ===
+2025-10-04 23:03:43,822 - load_data - INFO - === Loading and Preparing Data ===
+2025-10-04 23:03:43,834 - load_data - INFO - Raw data loaded with shape: (10191, 10)
+2025-10-04 23:03:43,834 - load_data - INFO - Columns after stripping: ['Location', 'Date', 'Time', 'CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)']
+2025-10-04 23:03:43,845 - load_data - INFO - Created AQI_Category from PM2.5 values
+2025-10-04 23:03:43,848 - load_data - INFO - Data shape after cleaning: (10184, 14)
+2025-10-04 23:03:43,893 - load_data - INFO - Saved cleaned data to artifacts/data_cleaned.csv
+2025-10-04 23:03:43,893 - __main__ - INFO - Applying feature engineering...
+2025-10-04 23:03:43,893 - feature_engineering - INFO - Creating advanced features...
+2025-10-04 23:03:43,913 - feature_engineering - INFO - Enhanced features created. New shape: (10184, 53)
+2025-10-04 23:03:43,916 - feature_engineering - WARNING - Features with >50% missing values: {'Date': np.float64(61.35113904163394), 'Month': np.float64(61.35113904163394), 'Hour': np.float64(100.0), 'DayOfWeek': np.float64(61.35113904163394), 'Quarter': np.float64(61.35113904163394), 'Month_sin': np.float64(61.35113904163394), 'Month_cos': np.float64(61.35113904163394)}
+2025-10-04 23:03:43,916 - feature_engineering - INFO - New features added: {'PM10(µg/m³)_lag1', 'SO2_NO2_ratio', 'NO2(µg/m³)_3h_mean', 'PM10(µg/m³)_lag2', 'PM2.5(µg/m³)_3h_std', 'PM2.5(µg/m³)_3h_mean', 'CO_NO2_product', 'CO_NO2_ratio', 'DayOfWeek', 'Month_sin', 'NO2(µg/m³)_lag2', 'PM25_trend', 'CO (mg/m3)_lag1', 'NO2(µg/m³)_3h_std', 'PM10(µg/m³)_3h_mean', 'CO (mg/m3)_lag2', 'SO2(µg/m³)_3h_std', 'NO2(µg/m³)_lag1', 'SO2(µg/m³)_lag1', 'Month_cos', 'CO (mg/m3)_3h_std', 'PM_combined', 'SO2(µg/m³)_lag2', 'CO (mg/m3)_3h_mean', 'Heat_Index', 'PM10(µg/m³)_3h_std', 'IsWeekend', 'CO (mg/m3)_6h_mean', 'PM25_PM10_ratio', 'PM2.5(µg/m³)_lag2', 'Temp_RH_product', 'SO2(µg/m³)_6h_mean', 'SO2(µg/m³)_3h_mean', 'NO2(µg/m³)_6h_mean', 'PM2.5(µg/m³)_lag1', 'PM25_severity', 'Quarter', 'PM10(µg/m³)_6h_mean', 'PM2.5(µg/m³)_6h_mean'}
+2025-10-04 23:03:43,916 - __main__ - INFO - 
+=== Running Data Quality Analysis ===
+2025-10-04 23:03:43,916 - utils - INFO - Validating data quality...
+2025-10-04 23:03:43,932 - utils - WARNING - Data quality issues found:
+2025-10-04 23:03:43,932 - utils - WARNING -   - Columns with >50% missing values: {'Date': 61.35113904163394, 'Month': 61.35113904163394, 'Hour': 100.0, 'DayOfWeek': 61.35113904163394, 'Quarter': 61.35113904163394, 'Month_sin': 61.35113904163394, 'Month_cos': 61.35113904163394}
+2025-10-04 23:03:44,082 - __main__ - INFO - Detected 962 outliers in PM2.5(µg/m³)
+2025-10-04 23:03:44,394 - __main__ - WARNING - Data quality issues detected but continuing...
+2025-10-04 23:03:44,394 - __main__ - INFO - === Starting Enhanced Classification Pipeline ===
+2025-10-04 23:03:44,394 - __main__ - INFO - 
+--- Processing Spring ---
+2025-10-04 23:03:44,396 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 23:03:44,396 - __main__ - INFO - Spring data shape: (1075, 53)
+2025-10-04 23:03:44,396 - eda - INFO - Performing EDA for Spring
+2025-10-04 23:03:48,613 - eda - INFO - EDA completed for Spring. Plots saved to artifacts/eda/spring
+2025-10-04 23:03:48,613 - preprocess - INFO - Preprocessing data for Spring
+2025-10-04 23:03:48,613 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 23:03:48,622 - preprocess - INFO - Training samples: 688
+2025-10-04 23:03:48,623 - preprocess - INFO - Evaluation samples: 172
+2025-10-04 23:03:48,623 - preprocess - INFO - Prediction samples: 215
+2025-10-04 23:03:48,623 - models - INFO - Training classification models for Spring
+2025-10-04 23:03:48,624 - hyperparameter_tuning - INFO - Starting hyperparameter tuning for classification models...
+2025-10-04 23:03:48,624 - hyperparameter_tuning - INFO - Tuning LogisticRegression...
+2025-10-04 23:03:50,579 - hyperparameter_tuning - INFO - LogisticRegression best score: 0.9852
+2025-10-04 23:03:50,579 - hyperparameter_tuning - INFO - LogisticRegression best params: {'C': 100.0, 'max_iter': 1000, 'solver': 'lbfgs'}
+2025-10-04 23:03:50,579 - hyperparameter_tuning - INFO - Tuning RandomForest...
+2025-10-04 23:03:59,915 - hyperparameter_tuning - INFO - RandomForest best score: 0.9962
+2025-10-04 23:03:59,915 - hyperparameter_tuning - INFO - RandomForest best params: {'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 300}
+2025-10-04 23:03:59,915 - hyperparameter_tuning - INFO - Tuning XGBoost...
+2025-10-04 23:04:03,215 - hyperparameter_tuning - INFO - XGBoost best score: 1.0000
+2025-10-04 23:04:03,215 - hyperparameter_tuning - INFO - XGBoost best params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
+2025-10-04 23:04:03,215 - hyperparameter_tuning - INFO - Tuning LightGBM...
+2025-10-04 23:07:34,409 - config_loader - INFO - Logging configured
+2025-10-04 23:07:34,409 - __main__ - INFO - Working directory: /home/ansari/farah
+2025-10-04 23:07:34,409 - config_loader - INFO - Required directories created
+2025-10-04 23:07:34,421 - experiment_tracking - INFO - MLflow experiment 'air_quality_prediction' setup completed
+2025-10-04 23:07:34,421 - __main__ - INFO - Experiment tracking initialized
+2025-10-04 23:07:34,421 - __main__ - INFO - Enhanced pipeline started at 2025-10-04 23:07:34
+2025-10-04 23:07:34,421 - __main__ - INFO - === Loading and Preparing Data ===
+2025-10-04 23:07:34,422 - load_data - INFO - === Loading and Preparing Data ===
+2025-10-04 23:07:34,433 - load_data - INFO - Raw data loaded with shape: (10191, 10)
+2025-10-04 23:07:34,433 - load_data - INFO - Columns after stripping: ['Location', 'Date', 'Time', 'CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)']
+2025-10-04 23:07:34,445 - load_data - INFO - Created AQI_Category from PM2.5 values
+2025-10-04 23:07:34,448 - load_data - INFO - Data shape after cleaning: (10184, 14)
+2025-10-04 23:07:34,493 - load_data - INFO - Saved cleaned data to artifacts/data_cleaned.csv
+2025-10-04 23:07:34,493 - __main__ - INFO - Applying feature engineering...
+2025-10-04 23:07:34,494 - feature_engineering - INFO - Creating advanced features...
+2025-10-04 23:07:34,515 - feature_engineering - INFO - Enhanced features created. New shape: (10184, 53)
+2025-10-04 23:07:34,518 - feature_engineering - WARNING - Features with >50% missing values: {'Date': np.float64(61.35113904163394), 'Month': np.float64(61.35113904163394), 'Hour': np.float64(100.0), 'DayOfWeek': np.float64(61.35113904163394), 'Quarter': np.float64(61.35113904163394), 'Month_sin': np.float64(61.35113904163394), 'Month_cos': np.float64(61.35113904163394)}
+2025-10-04 23:07:34,518 - feature_engineering - INFO - New features added: {'NO2(µg/m³)_3h_mean', 'NO2(µg/m³)_6h_mean', 'Month_sin', 'CO_NO2_product', 'DayOfWeek', 'CO (mg/m3)_lag2', 'PM2.5(µg/m³)_3h_mean', 'PM25_trend', 'CO (mg/m3)_3h_std', 'CO_NO2_ratio', 'SO2(µg/m³)_3h_mean', 'PM10(µg/m³)_6h_mean', 'SO2(µg/m³)_3h_std', 'PM25_PM10_ratio', 'PM25_severity', 'PM2.5(µg/m³)_lag2', 'NO2(µg/m³)_lag1', 'SO2(µg/m³)_lag2', 'CO (mg/m3)_3h_mean', 'SO2(µg/m³)_lag1', 'CO (mg/m3)_lag1', 'PM_combined', 'Quarter', 'CO (mg/m3)_6h_mean', 'SO2(µg/m³)_6h_mean', 'NO2(µg/m³)_3h_std', 'PM2.5(µg/m³)_6h_mean', 'NO2(µg/m³)_lag2', 'PM10(µg/m³)_3h_std', 'PM10(µg/m³)_lag1', 'PM2.5(µg/m³)_3h_std', 'SO2_NO2_ratio', 'Month_cos', 'Temp_RH_product', 'Heat_Index', 'PM2.5(µg/m³)_lag1', 'PM10(µg/m³)_3h_mean', 'PM10(µg/m³)_lag2', 'IsWeekend'}
+2025-10-04 23:07:34,518 - __main__ - INFO - 
+=== Running Data Quality Analysis ===
+2025-10-04 23:07:34,518 - utils - INFO - Validating data quality...
+2025-10-04 23:07:34,534 - utils - WARNING - Data quality issues found:
+2025-10-04 23:07:34,534 - utils - WARNING -   - Columns with >50% missing values: {'Date': 61.35113904163394, 'Month': 61.35113904163394, 'Hour': 100.0, 'DayOfWeek': 61.35113904163394, 'Quarter': 61.35113904163394, 'Month_sin': 61.35113904163394, 'Month_cos': 61.35113904163394}
+2025-10-04 23:07:34,690 - __main__ - INFO - Detected 962 outliers in PM2.5(µg/m³)
+2025-10-04 23:07:35,002 - __main__ - WARNING - Data quality issues detected but continuing...
+2025-10-04 23:07:35,002 - __main__ - INFO - === Starting Enhanced Classification Pipeline ===
+2025-10-04 23:07:35,003 - __main__ - INFO - 
+--- Processing Spring ---
+2025-10-04 23:07:35,004 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 23:07:35,004 - __main__ - INFO - Spring data shape: (1075, 53)
+2025-10-04 23:07:35,004 - eda - INFO - Performing EDA for Spring
+2025-10-04 23:07:39,160 - eda - INFO - EDA completed for Spring. Plots saved to artifacts/eda/spring
+2025-10-04 23:07:39,160 - preprocess - INFO - Preprocessing data for Spring
+2025-10-04 23:07:39,160 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 23:07:39,169 - preprocess - INFO - Training samples: 688
+2025-10-04 23:07:39,169 - preprocess - INFO - Evaluation samples: 172
+2025-10-04 23:07:39,169 - preprocess - INFO - Prediction samples: 215
+2025-10-04 23:07:39,352 - experiment_tracking - INFO - Started MLflow run: classification_spring
+2025-10-04 23:07:39,352 - models - INFO - Training classification models for Spring
+2025-10-04 23:07:39,353 - hyperparameter_tuning - INFO - Starting hyperparameter tuning for classification models...
+2025-10-04 23:07:39,353 - hyperparameter_tuning - INFO - Tuning LogisticRegression...
+2025-10-04 23:07:41,451 - hyperparameter_tuning - INFO - LogisticRegression best score: 0.9852
+2025-10-04 23:07:41,451 - hyperparameter_tuning - INFO - LogisticRegression best params: {'C': 100.0, 'max_iter': 1000, 'solver': 'lbfgs'}
+2025-10-04 23:07:41,451 - hyperparameter_tuning - INFO - Tuning RandomForest...
+2025-10-04 23:07:49,476 - hyperparameter_tuning - INFO - RandomForest best score: 0.9962
+2025-10-04 23:07:49,477 - hyperparameter_tuning - INFO - RandomForest best params: {'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 300}
+2025-10-04 23:07:49,477 - hyperparameter_tuning - INFO - Tuning XGBoost...
+2025-10-04 23:07:55,398 - hyperparameter_tuning - INFO - XGBoost best score: 1.0000
+2025-10-04 23:07:55,398 - hyperparameter_tuning - INFO - XGBoost best params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
+2025-10-04 23:07:55,398 - hyperparameter_tuning - INFO - Tuning LightGBM...
+2025-10-04 23:22:40,531 - config_loader - INFO - Logging configured
+2025-10-04 23:22:40,532 - __main__ - INFO - Working directory: /home/ansari/farah
+2025-10-04 23:22:40,532 - config_loader - INFO - Required directories created
+2025-10-04 23:22:40,544 - experiment_tracking - INFO - MLflow experiment 'air_quality_prediction' setup completed
+2025-10-04 23:22:40,544 - __main__ - INFO - Experiment tracking initialized
+2025-10-04 23:22:40,544 - __main__ - INFO - Enhanced pipeline started at 2025-10-04 23:22:40
+2025-10-04 23:22:40,544 - __main__ - INFO - === Loading and Preparing Data ===
+2025-10-04 23:22:40,544 - load_data - INFO - === Loading and Preparing Data ===
+2025-10-04 23:22:40,555 - load_data - INFO - Raw data loaded with shape: (10191, 10)
+2025-10-04 23:22:40,555 - load_data - INFO - Columns after stripping: ['Location', 'Date', 'Time', 'CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)']
+2025-10-04 23:22:40,568 - load_data - INFO - Created AQI_Category from PM2.5 values
+2025-10-04 23:22:40,570 - load_data - INFO - Data shape after cleaning: (10184, 14)
+2025-10-04 23:22:40,615 - load_data - INFO - Saved cleaned data to artifacts/data_cleaned.csv
+2025-10-04 23:22:40,615 - __main__ - INFO - Applying feature engineering...
+2025-10-04 23:22:40,615 - feature_engineering - INFO - Creating advanced features...
+2025-10-04 23:22:40,635 - feature_engineering - INFO - Enhanced features created. New shape: (10184, 53)
+2025-10-04 23:22:40,638 - feature_engineering - WARNING - Features with >50% missing values: {'Date': np.float64(61.35113904163394), 'Month': np.float64(61.35113904163394), 'Hour': np.float64(100.0), 'DayOfWeek': np.float64(61.35113904163394), 'Quarter': np.float64(61.35113904163394), 'Month_sin': np.float64(61.35113904163394), 'Month_cos': np.float64(61.35113904163394)}
+2025-10-04 23:22:40,638 - feature_engineering - INFO - New features added: {'PM25_trend', 'Temp_RH_product', 'Quarter', 'NO2(µg/m³)_3h_mean', 'DayOfWeek', 'CO (mg/m3)_lag1', 'SO2(µg/m³)_3h_mean', 'SO2_NO2_ratio', 'PM10(µg/m³)_lag1', 'CO (mg/m3)_3h_mean', 'CO (mg/m3)_6h_mean', 'Month_cos', 'CO (mg/m3)_lag2', 'CO (mg/m3)_3h_std', 'PM10(µg/m³)_3h_std', 'PM25_severity', 'PM2.5(µg/m³)_lag2', 'PM25_PM10_ratio', 'PM10(µg/m³)_6h_mean', 'SO2(µg/m³)_lag1', 'NO2(µg/m³)_lag1', 'IsWeekend', 'PM2.5(µg/m³)_6h_mean', 'PM2.5(µg/m³)_3h_mean', 'SO2(µg/m³)_3h_std', 'PM2.5(µg/m³)_3h_std', 'CO_NO2_ratio', 'SO2(µg/m³)_6h_mean', 'NO2(µg/m³)_6h_mean', 'SO2(µg/m³)_lag2', 'NO2(µg/m³)_lag2', 'PM10(µg/m³)_lag2', 'PM10(µg/m³)_3h_mean', 'PM_combined', 'CO_NO2_product', 'Month_sin', 'NO2(µg/m³)_3h_std', 'Heat_Index', 'PM2.5(µg/m³)_lag1'}
+2025-10-04 23:22:40,638 - __main__ - INFO - 
+=== Running Data Quality Analysis ===
+2025-10-04 23:22:40,638 - utils - INFO - Validating data quality...
+2025-10-04 23:22:40,654 - utils - WARNING - Data quality issues found:
+2025-10-04 23:22:40,654 - utils - WARNING -   - Columns with >50% missing values: {'Date': 61.35113904163394, 'Month': 61.35113904163394, 'Hour': 100.0, 'DayOfWeek': 61.35113904163394, 'Quarter': 61.35113904163394, 'Month_sin': 61.35113904163394, 'Month_cos': 61.35113904163394}
+2025-10-04 23:22:40,806 - __main__ - INFO - Detected 962 outliers in PM2.5(µg/m³)
+2025-10-04 23:22:41,109 - __main__ - WARNING - Data quality issues detected but continuing...
+2025-10-04 23:22:41,110 - __main__ - INFO - === Starting Enhanced Classification Pipeline ===
+2025-10-04 23:22:41,110 - __main__ - INFO - 
+--- Processing Spring ---
+2025-10-04 23:22:41,111 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-04 23:22:41,111 - __main__ - INFO - Spring data shape: (1075, 53)
+2025-10-04 23:22:41,111 - eda - INFO - Performing EDA for Spring
+2025-10-04 23:22:45,118 - eda - INFO - EDA completed for Spring. Plots saved to artifacts/eda/spring
+2025-10-04 23:22:45,118 - preprocess - INFO - Preprocessing data for Spring
+2025-10-04 23:22:45,118 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-04 23:22:45,127 - preprocess - INFO - Training samples: 688
+2025-10-04 23:22:45,128 - preprocess - INFO - Evaluation samples: 172
+2025-10-04 23:22:45,128 - preprocess - INFO - Prediction samples: 215
+2025-10-04 23:22:45,308 - experiment_tracking - INFO - Started MLflow run: classification_spring
+2025-10-04 23:22:45,308 - models - INFO - Training classification models for Spring
+2025-10-04 23:22:45,309 - hyperparameter_tuning - INFO - Starting hyperparameter tuning for classification models...
+2025-10-04 23:22:45,310 - hyperparameter_tuning - INFO - Tuning LogisticRegression...
+2025-10-04 23:22:47,408 - hyperparameter_tuning - INFO - LogisticRegression best score: 0.9852
+2025-10-04 23:22:47,408 - hyperparameter_tuning - INFO - LogisticRegression best params: {'C': 100.0, 'max_iter': 1000, 'solver': 'lbfgs'}
+2025-10-04 23:22:47,408 - hyperparameter_tuning - INFO - Tuning RandomForest...
+2025-10-04 23:22:55,488 - hyperparameter_tuning - INFO - RandomForest best score: 0.9962
+2025-10-04 23:22:55,488 - hyperparameter_tuning - INFO - RandomForest best params: {'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 300}
+2025-10-04 23:22:55,488 - hyperparameter_tuning - INFO - Tuning XGBoost...
+2025-10-04 23:23:04,318 - hyperparameter_tuning - INFO - XGBoost best score: 1.0000
+2025-10-04 23:23:04,319 - hyperparameter_tuning - INFO - XGBoost best params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
+2025-10-04 23:23:04,319 - hyperparameter_tuning - INFO - Tuning LightGBM...
+2025-10-05 00:01:25,221 - hyperparameter_tuning - INFO - LightGBM best score: 0.9942
+2025-10-05 00:01:25,222 - hyperparameter_tuning - INFO - LightGBM best params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'num_leaves': 31}
+2025-10-05 00:01:25,222 - hyperparameter_tuning - INFO - Tuning DecisionTree...
+2025-10-05 00:01:25,294 - hyperparameter_tuning - INFO - DecisionTree best score: 1.0000
+2025-10-05 00:01:25,294 - hyperparameter_tuning - INFO - DecisionTree best params: {'max_depth': 5, 'min_samples_leaf': 1, 'min_samples_split': 2}
+2025-10-05 00:01:25,294 - hyperparameter_tuning - INFO - Tuning SVM...
+2025-10-05 00:01:25,431 - hyperparameter_tuning - INFO - SVM best score: 0.9803
+2025-10-05 00:01:25,431 - hyperparameter_tuning - INFO - SVM best params: {'C': 10, 'gamma': 'scale', 'kernel': 'linear'}
+2025-10-05 00:01:25,431 - hyperparameter_tuning - INFO - Tuning MLP...
+2025-10-05 00:01:38,860 - hyperparameter_tuning - INFO - MLP best score: 0.9833
+2025-10-05 00:01:38,860 - hyperparameter_tuning - INFO - MLP best params: {'activation': 'tanh', 'alpha': 0.0001, 'hidden_layer_sizes': (50, 50), 'learning_rate': 'constant'}
+2025-10-05 00:01:38,860 - models - INFO - Hyperparameter tuning completed
+2025-10-05 00:01:38,860 - ensemble_models - INFO - Creating voting classifier...
+2025-10-05 00:01:47,888 - ensemble_models - INFO - Hard voting selected (score: 0.9989)
+2025-10-05 00:01:47,889 - ensemble_models - INFO - Creating stacking classifier...
+2025-10-05 00:02:02,569 - ensemble_models - INFO - Stacking classifier F1 score: 0.9989
+2025-10-05 00:02:02,569 - ensemble_models - INFO - Created 2 ensemble models
+2025-10-05 00:02:02,569 - models - INFO - Ensemble models created
+2025-10-05 00:02:02,569 - models - INFO - Training LogisticRegression...
+2025-10-05 00:02:02,596 - models - INFO - LogisticRegression - F1: 0.9560, Accuracy: 0.9651
+2025-10-05 00:02:02,596 - models - INFO - Training RandomForest...
+2025-10-05 00:02:02,975 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='27c93f14edd748f2833a6c28e80b21d7'. Attempted logging new value 'RandomForest'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:02:02,986 - models - INFO - RandomForest - F1: 0.9928, Accuracy: 0.9942
+2025-10-05 00:02:02,986 - models - INFO - Training XGBoost...
+2025-10-05 00:02:03,035 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='27c93f14edd748f2833a6c28e80b21d7'. Attempted logging new value 'XGBoost'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:02:03,046 - models - INFO - XGBoost - F1: 0.9920, Accuracy: 0.9942
+2025-10-05 00:02:03,046 - models - INFO - Training LightGBM...
+2025-10-05 00:02:03,071 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='27c93f14edd748f2833a6c28e80b21d7'. Attempted logging new value 'LightGBM'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:02:03,081 - models - INFO - LightGBM - F1: 1.0000, Accuracy: 1.0000
+2025-10-05 00:02:03,082 - models - INFO - Training DecisionTree...
+2025-10-05 00:02:03,088 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='27c93f14edd748f2833a6c28e80b21d7'. Attempted logging new value 'DecisionTree'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:02:03,098 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-05 00:02:03,098 - models - INFO - Training SVM...
+2025-10-05 00:02:03,121 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='27c93f14edd748f2833a6c28e80b21d7'. Attempted logging new value 'SVM'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:02:03,131 - models - INFO - SVM - F1: 0.9380, Accuracy: 0.9419
+2025-10-05 00:02:03,131 - models - INFO - Training MLP...
+2025-10-05 00:02:04,110 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='27c93f14edd748f2833a6c28e80b21d7'. Attempted logging new value 'MLP'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:02:04,120 - models - INFO - MLP - F1: 0.9641, Accuracy: 0.9709
+2025-10-05 00:02:04,121 - models - INFO - Training VotingClassifier...
+2025-10-05 00:02:05,847 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='27c93f14edd748f2833a6c28e80b21d7'. Attempted logging new value 'VotingClassifier'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:02:05,858 - models - INFO - VotingClassifier - F1: 1.0000, Accuracy: 1.0000
+2025-10-05 00:02:05,858 - models - INFO - Training StackingClassifier...
+2025-10-05 00:02:10,419 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='27c93f14edd748f2833a6c28e80b21d7'. Attempted logging new value 'StackingClassifier'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:02:10,430 - models - INFO - StackingClassifier - F1: 1.0000, Accuracy: 1.0000
+2025-10-05 00:02:10,432 - models - INFO - Best model for Spring: LightGBM with F1 1.0000
+2025-10-05 00:02:10,436 - experiment_tracking - INFO - MLflow run ended
+2025-10-05 00:02:10,436 - evaluate_enhanced - INFO - Generating comprehensive report for Spring classification
+2025-10-05 00:02:10,436 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/spring/comprehensive_report.md
+2025-10-05 00:02:10,436 - __main__ - INFO - 
+--- Processing Summer ---
+2025-10-05 00:02:10,438 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-05 00:02:10,438 - __main__ - INFO - Summer data shape: (816, 53)
+2025-10-05 00:02:10,438 - eda - INFO - Performing EDA for Summer
+2025-10-05 00:02:14,452 - eda - INFO - EDA completed for Summer. Plots saved to artifacts/eda/summer
+2025-10-05 00:02:14,452 - preprocess - INFO - Preprocessing data for Summer
+2025-10-05 00:02:14,452 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-05 00:02:14,460 - preprocess - INFO - Training samples: 521
+2025-10-05 00:02:14,460 - preprocess - INFO - Evaluation samples: 131
+2025-10-05 00:02:14,460 - preprocess - INFO - Prediction samples: 164
+2025-10-05 00:02:14,466 - experiment_tracking - INFO - Started MLflow run: classification_summer
+2025-10-05 00:02:14,466 - models - INFO - Training classification models for Summer
+2025-10-05 00:02:14,466 - hyperparameter_tuning - INFO - Starting hyperparameter tuning for classification models...
+2025-10-05 00:02:14,466 - hyperparameter_tuning - INFO - Tuning LogisticRegression...
+2025-10-05 00:02:14,511 - hyperparameter_tuning - INFO - LogisticRegression best score: 0.9682
+2025-10-05 00:02:14,511 - hyperparameter_tuning - INFO - LogisticRegression best params: {'C': 100.0, 'max_iter': 1000, 'solver': 'lbfgs'}
+2025-10-05 00:02:14,511 - hyperparameter_tuning - INFO - Tuning RandomForest...
+2025-10-05 00:02:22,120 - hyperparameter_tuning - INFO - RandomForest best score: 0.9898
+2025-10-05 00:02:22,121 - hyperparameter_tuning - INFO - RandomForest best params: {'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 300}
+2025-10-05 00:02:22,121 - hyperparameter_tuning - INFO - Tuning XGBoost...
+2025-10-05 00:02:22,806 - hyperparameter_tuning - INFO - XGBoost best score: 1.0000
+2025-10-05 00:02:22,809 - hyperparameter_tuning - INFO - XGBoost best params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
+2025-10-05 00:02:22,809 - hyperparameter_tuning - INFO - Tuning LightGBM...
+2025-10-05 00:38:49,848 - hyperparameter_tuning - INFO - LightGBM best score: 0.9958
+2025-10-05 00:38:49,848 - hyperparameter_tuning - INFO - LightGBM best params: {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'num_leaves': 31}
+2025-10-05 00:38:49,848 - hyperparameter_tuning - INFO - Tuning DecisionTree...
+2025-10-05 00:38:49,910 - hyperparameter_tuning - INFO - DecisionTree best score: 1.0000
+2025-10-05 00:38:49,910 - hyperparameter_tuning - INFO - DecisionTree best params: {'max_depth': 5, 'min_samples_leaf': 1, 'min_samples_split': 2}
+2025-10-05 00:38:49,911 - hyperparameter_tuning - INFO - Tuning SVM...
+2025-10-05 00:38:50,023 - hyperparameter_tuning - INFO - SVM best score: 0.9709
+2025-10-05 00:38:50,023 - hyperparameter_tuning - INFO - SVM best params: {'C': 10, 'gamma': 'scale', 'kernel': 'linear'}
+2025-10-05 00:38:50,023 - hyperparameter_tuning - INFO - Tuning MLP...
+2025-10-05 00:39:00,292 - hyperparameter_tuning - INFO - MLP best score: 0.9683
+2025-10-05 00:39:00,292 - hyperparameter_tuning - INFO - MLP best params: {'activation': 'tanh', 'alpha': 0.0001, 'hidden_layer_sizes': (50, 50), 'learning_rate': 'constant'}
+2025-10-05 00:39:00,292 - models - INFO - Hyperparameter tuning completed
+2025-10-05 00:39:00,292 - ensemble_models - INFO - Creating voting classifier...
+2025-10-05 00:39:07,581 - ensemble_models - INFO - Soft voting selected (score: 1.0000)
+2025-10-05 00:39:07,582 - ensemble_models - INFO - Creating stacking classifier...
+2025-10-05 00:39:20,179 - ensemble_models - INFO - Stacking classifier F1 score: 1.0000
+2025-10-05 00:39:20,179 - ensemble_models - INFO - Created 2 ensemble models
+2025-10-05 00:39:20,179 - models - INFO - Ensemble models created
+2025-10-05 00:39:20,179 - models - INFO - Training LogisticRegression...
+2025-10-05 00:39:20,202 - models - INFO - LogisticRegression - F1: 0.9918, Accuracy: 0.9924
+2025-10-05 00:39:20,202 - models - INFO - Training RandomForest...
+2025-10-05 00:39:20,547 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='b36795fad7424a11be27c1e7388bf358'. Attempted logging new value 'RandomForest'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:39:20,557 - models - INFO - RandomForest - F1: 0.9833, Accuracy: 0.9847
+2025-10-05 00:39:20,557 - models - INFO - Training XGBoost...
+2025-10-05 00:39:20,605 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='b36795fad7424a11be27c1e7388bf358'. Attempted logging new value 'XGBoost'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:39:20,616 - models - INFO - XGBoost - F1: 1.0000, Accuracy: 1.0000
+2025-10-05 00:39:20,616 - models - INFO - Training LightGBM...
+2025-10-05 00:39:20,641 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='b36795fad7424a11be27c1e7388bf358'. Attempted logging new value 'LightGBM'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:39:20,651 - models - INFO - LightGBM - F1: 1.0000, Accuracy: 1.0000
+2025-10-05 00:39:20,651 - models - INFO - Training DecisionTree...
+2025-10-05 00:39:20,658 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='b36795fad7424a11be27c1e7388bf358'. Attempted logging new value 'DecisionTree'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:39:20,667 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-05 00:39:20,667 - models - INFO - Training SVM...
+2025-10-05 00:39:20,686 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='b36795fad7424a11be27c1e7388bf358'. Attempted logging new value 'SVM'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:39:20,696 - models - INFO - SVM - F1: 0.9889, Accuracy: 0.9924
+2025-10-05 00:39:20,696 - models - INFO - Training MLP...
+2025-10-05 00:39:21,436 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='b36795fad7424a11be27c1e7388bf358'. Attempted logging new value 'MLP'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:39:21,447 - models - INFO - MLP - F1: 0.9889, Accuracy: 0.9924
+2025-10-05 00:39:21,447 - models - INFO - Training VotingClassifier...
+2025-10-05 00:39:22,683 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='b36795fad7424a11be27c1e7388bf358'. Attempted logging new value 'VotingClassifier'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:39:22,693 - models - INFO - VotingClassifier - F1: 1.0000, Accuracy: 1.0000
+2025-10-05 00:39:22,693 - models - INFO - Training StackingClassifier...
+2025-10-05 00:39:26,401 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='b36795fad7424a11be27c1e7388bf358'. Attempted logging new value 'StackingClassifier'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 00:39:26,411 - models - INFO - StackingClassifier - F1: 1.0000, Accuracy: 1.0000
+2025-10-05 00:39:26,413 - models - INFO - Best model for Summer: XGBoost with F1 1.0000
+2025-10-05 00:39:26,415 - experiment_tracking - INFO - MLflow run ended
+2025-10-05 00:39:26,415 - evaluate_enhanced - INFO - Generating comprehensive report for Summer classification
+2025-10-05 00:39:26,415 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/summer/comprehensive_report.md
+2025-10-05 00:39:26,416 - __main__ - INFO - 
+--- Processing Autumn ---
+2025-10-05 00:39:26,418 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-05 00:39:26,418 - __main__ - INFO - Autumn data shape: (7228, 53)
+2025-10-05 00:39:26,418 - eda - INFO - Performing EDA for Autumn
+2025-10-05 00:39:30,568 - eda - INFO - EDA completed for Autumn. Plots saved to artifacts/eda/autumn
+2025-10-05 00:39:30,569 - preprocess - INFO - Preprocessing data for Autumn
+2025-10-05 00:39:30,569 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-05 00:39:30,583 - preprocess - INFO - Training samples: 4625
+2025-10-05 00:39:30,583 - preprocess - INFO - Evaluation samples: 1157
+2025-10-05 00:39:30,583 - preprocess - INFO - Prediction samples: 1446
+2025-10-05 00:39:30,589 - experiment_tracking - INFO - Started MLflow run: classification_autumn
+2025-10-05 00:39:30,589 - models - INFO - Training classification models for Autumn
+2025-10-05 00:39:30,590 - hyperparameter_tuning - INFO - Starting hyperparameter tuning for classification models...
+2025-10-05 00:39:30,590 - hyperparameter_tuning - INFO - Tuning LogisticRegression...
+2025-10-05 00:39:30,674 - hyperparameter_tuning - INFO - LogisticRegression best score: 0.9964
+2025-10-05 00:39:30,674 - hyperparameter_tuning - INFO - LogisticRegression best params: {'C': 100.0, 'max_iter': 1000, 'solver': 'lbfgs'}
+2025-10-05 00:39:30,674 - hyperparameter_tuning - INFO - Tuning RandomForest...
+2025-10-05 00:39:46,256 - hyperparameter_tuning - INFO - RandomForest best score: 0.9990
+2025-10-05 00:39:46,257 - hyperparameter_tuning - INFO - RandomForest best params: {'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 200}
+2025-10-05 00:39:46,257 - hyperparameter_tuning - INFO - Tuning XGBoost...
+2025-10-05 00:39:47,843 - hyperparameter_tuning - INFO - XGBoost best score: 0.9996
+2025-10-05 00:39:47,847 - hyperparameter_tuning - INFO - XGBoost best params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
+2025-10-05 00:39:47,847 - hyperparameter_tuning - INFO - Tuning LightGBM...
+2025-10-05 01:37:00,996 - hyperparameter_tuning - INFO - LightGBM best score: 0.9992
+2025-10-05 01:37:00,996 - hyperparameter_tuning - INFO - LightGBM best params: {'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 100, 'num_leaves': 31}
+2025-10-05 01:37:00,996 - hyperparameter_tuning - INFO - Tuning DecisionTree...
+2025-10-05 01:37:01,115 - hyperparameter_tuning - INFO - DecisionTree best score: 0.9996
+2025-10-05 01:37:01,115 - hyperparameter_tuning - INFO - DecisionTree best params: {'max_depth': 5, 'min_samples_leaf': 1, 'min_samples_split': 2}
+2025-10-05 01:37:01,115 - hyperparameter_tuning - INFO - Tuning SVM...
+2025-10-05 01:37:04,111 - hyperparameter_tuning - INFO - SVM best score: 0.9990
+2025-10-05 01:37:04,112 - hyperparameter_tuning - INFO - SVM best params: {'C': 100, 'gamma': 'scale', 'kernel': 'linear'}
+2025-10-05 01:37:04,112 - hyperparameter_tuning - INFO - Tuning MLP...
+2025-10-05 01:38:01,172 - hyperparameter_tuning - INFO - MLP best score: 0.9963
+2025-10-05 01:38:01,172 - hyperparameter_tuning - INFO - MLP best params: {'activation': 'tanh', 'alpha': 0.01, 'hidden_layer_sizes': (100, 50), 'learning_rate': 'constant'}
+2025-10-05 01:38:01,173 - models - INFO - Hyperparameter tuning completed
+2025-10-05 01:38:01,173 - ensemble_models - INFO - Creating voting classifier...
+2025-10-05 01:38:30,191 - ensemble_models - INFO - Soft voting selected (score: 0.9996)
+2025-10-05 01:38:30,192 - ensemble_models - INFO - Creating stacking classifier...
+2025-10-05 01:39:14,001 - ensemble_models - INFO - Stacking classifier F1 score: 0.9996
+2025-10-05 01:39:14,001 - ensemble_models - INFO - Created 2 ensemble models
+2025-10-05 01:39:14,002 - models - INFO - Ensemble models created
+2025-10-05 01:39:14,002 - models - INFO - Training LogisticRegression...
+2025-10-05 01:39:14,104 - models - INFO - LogisticRegression - F1: 0.9971, Accuracy: 0.9965
+2025-10-05 01:39:14,104 - models - INFO - Training RandomForest...
+2025-10-05 01:39:14,707 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='8dccaf7f8051416587516001f82a8938'. Attempted logging new value 'RandomForest'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 01:39:14,717 - models - INFO - RandomForest - F1: 0.9978, Accuracy: 0.9974
+2025-10-05 01:39:14,717 - models - INFO - Training XGBoost...
+2025-10-05 01:39:14,787 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='8dccaf7f8051416587516001f82a8938'. Attempted logging new value 'XGBoost'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 01:39:14,798 - models - INFO - XGBoost - F1: 0.9978, Accuracy: 0.9974
+2025-10-05 01:39:14,798 - models - INFO - Training LightGBM...
+2025-10-05 01:39:14,837 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='8dccaf7f8051416587516001f82a8938'. Attempted logging new value 'LightGBM'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 01:39:14,848 - models - INFO - LightGBM - F1: 0.9985, Accuracy: 0.9983
+2025-10-05 01:39:14,848 - models - INFO - Training DecisionTree...
+2025-10-05 01:39:14,859 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='8dccaf7f8051416587516001f82a8938'. Attempted logging new value 'DecisionTree'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 01:39:14,869 - models - INFO - DecisionTree - F1: 0.9985, Accuracy: 0.9983
+2025-10-05 01:39:14,869 - models - INFO - Training SVM...
+2025-10-05 01:39:15,716 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='8dccaf7f8051416587516001f82a8938'. Attempted logging new value 'SVM'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 01:39:15,726 - models - INFO - SVM - F1: 0.9985, Accuracy: 0.9983
+2025-10-05 01:39:15,726 - models - INFO - Training MLP...
+2025-10-05 01:39:19,084 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='8dccaf7f8051416587516001f82a8938'. Attempted logging new value 'MLP'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 01:39:19,098 - models - INFO - MLP - F1: 0.9953, Accuracy: 0.9965
+2025-10-05 01:39:19,098 - models - INFO - Training VotingClassifier...
+2025-10-05 01:39:24,171 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='8dccaf7f8051416587516001f82a8938'. Attempted logging new value 'VotingClassifier'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 01:39:24,181 - models - INFO - VotingClassifier - F1: 0.9993, Accuracy: 0.9991
+2025-10-05 01:39:24,181 - models - INFO - Training StackingClassifier...
+2025-10-05 01:39:38,652 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='8dccaf7f8051416587516001f82a8938'. Attempted logging new value 'StackingClassifier'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 01:39:38,663 - models - INFO - StackingClassifier - F1: 0.9993, Accuracy: 0.9991
+2025-10-05 01:39:38,664 - models - INFO - Best model for Autumn: VotingClassifier with F1 0.9993
+2025-10-05 01:39:38,665 - experiment_tracking - INFO - MLflow run ended
+2025-10-05 01:39:38,665 - evaluate_enhanced - INFO - Generating comprehensive report for Autumn classification
+2025-10-05 01:39:38,666 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/autumn/comprehensive_report.md
+2025-10-05 01:39:38,666 - __main__ - INFO - 
+--- Processing Winter ---
+2025-10-05 01:39:38,667 - config_loader - WARNING - Configuration key 'training.min_samples_per_season' not found, using default: 100
+2025-10-05 01:39:38,667 - __main__ - INFO - Winter data shape: (1065, 53)
+2025-10-05 01:39:38,667 - eda - INFO - Performing EDA for Winter
+2025-10-05 01:39:42,809 - eda - INFO - EDA completed for Winter. Plots saved to artifacts/eda/winter
+2025-10-05 01:39:42,809 - preprocess - INFO - Preprocessing data for Winter
+2025-10-05 01:39:42,809 - preprocess - INFO - Available features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM2.5(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-05 01:39:42,817 - preprocess - INFO - Training samples: 681
+2025-10-05 01:39:42,817 - preprocess - INFO - Evaluation samples: 171
+2025-10-05 01:39:42,817 - preprocess - INFO - Prediction samples: 213
+2025-10-05 01:39:42,823 - experiment_tracking - INFO - Started MLflow run: classification_winter
+2025-10-05 01:39:42,823 - models - INFO - Training classification models for Winter
+2025-10-05 01:39:42,824 - hyperparameter_tuning - INFO - Starting hyperparameter tuning for classification models...
+2025-10-05 01:39:42,824 - hyperparameter_tuning - INFO - Tuning LogisticRegression...
+2025-10-05 01:39:42,870 - hyperparameter_tuning - INFO - LogisticRegression best score: 0.9668
+2025-10-05 01:39:42,870 - hyperparameter_tuning - INFO - LogisticRegression best params: {'C': 100.0, 'max_iter': 1000, 'solver': 'lbfgs'}
+2025-10-05 01:39:42,870 - hyperparameter_tuning - INFO - Tuning RandomForest...
+2025-10-05 01:39:50,754 - hyperparameter_tuning - INFO - RandomForest best score: 0.9872
+2025-10-05 01:39:50,754 - hyperparameter_tuning - INFO - RandomForest best params: {'max_depth': 5, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 200}
+2025-10-05 01:39:50,754 - hyperparameter_tuning - INFO - Tuning XGBoost...
+2025-10-05 01:39:51,499 - hyperparameter_tuning - INFO - XGBoost best score: 0.9921
+2025-10-05 01:39:51,499 - hyperparameter_tuning - INFO - XGBoost best params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
+2025-10-05 01:39:51,499 - hyperparameter_tuning - INFO - Tuning LightGBM...
+2025-10-05 02:21:25,402 - hyperparameter_tuning - INFO - LightGBM best score: 0.9984
+2025-10-05 02:21:25,402 - hyperparameter_tuning - INFO - LightGBM best params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'num_leaves': 31}
+2025-10-05 02:21:25,402 - hyperparameter_tuning - INFO - Tuning DecisionTree...
+2025-10-05 02:21:25,474 - hyperparameter_tuning - INFO - DecisionTree best score: 0.9921
+2025-10-05 02:21:25,474 - hyperparameter_tuning - INFO - DecisionTree best params: {'max_depth': 5, 'min_samples_leaf': 1, 'min_samples_split': 2}
+2025-10-05 02:21:25,474 - hyperparameter_tuning - INFO - Tuning SVM...
+2025-10-05 02:21:25,642 - hyperparameter_tuning - INFO - SVM best score: 0.9739
+2025-10-05 02:21:25,642 - hyperparameter_tuning - INFO - SVM best params: {'C': 100, 'gamma': 'scale', 'kernel': 'linear'}
+2025-10-05 02:21:25,642 - hyperparameter_tuning - INFO - Tuning MLP...
+2025-10-05 02:21:39,663 - hyperparameter_tuning - INFO - MLP best score: 0.9664
+2025-10-05 02:21:39,663 - hyperparameter_tuning - INFO - MLP best params: {'activation': 'tanh', 'alpha': 0.0001, 'hidden_layer_sizes': (50, 50), 'learning_rate': 'constant'}
+2025-10-05 02:21:39,664 - models - INFO - Hyperparameter tuning completed
+2025-10-05 02:21:39,664 - ensemble_models - INFO - Creating voting classifier...
+2025-10-05 02:21:48,161 - ensemble_models - INFO - Hard voting selected (score: 0.9899)
+2025-10-05 02:21:48,162 - ensemble_models - INFO - Creating stacking classifier...
+2025-10-05 02:22:01,814 - ensemble_models - INFO - Stacking classifier F1 score: 0.9921
+2025-10-05 02:22:01,814 - ensemble_models - INFO - Created 2 ensemble models
+2025-10-05 02:22:01,814 - models - INFO - Ensemble models created
+2025-10-05 02:22:01,814 - models - INFO - Training LogisticRegression...
+2025-10-05 02:22:01,845 - models - INFO - LogisticRegression - F1: 0.9788, Accuracy: 0.9825
+2025-10-05 02:22:01,845 - models - INFO - Training RandomForest...
+2025-10-05 02:22:02,095 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='4e52ed43af594681b081353a4a7774c5'. Attempted logging new value 'RandomForest'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:22:02,105 - models - INFO - RandomForest - F1: 0.9692, Accuracy: 0.9708
+2025-10-05 02:22:02,105 - models - INFO - Training XGBoost...
+2025-10-05 02:22:02,155 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='4e52ed43af594681b081353a4a7774c5'. Attempted logging new value 'XGBoost'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:22:02,165 - models - INFO - XGBoost - F1: 1.0000, Accuracy: 1.0000
+2025-10-05 02:22:02,166 - models - INFO - Training LightGBM...
+2025-10-05 02:22:02,194 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='4e52ed43af594681b081353a4a7774c5'. Attempted logging new value 'LightGBM'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:22:02,204 - models - INFO - LightGBM - F1: 1.0000, Accuracy: 1.0000
+2025-10-05 02:22:02,204 - models - INFO - Training DecisionTree...
+2025-10-05 02:22:02,211 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='4e52ed43af594681b081353a4a7774c5'. Attempted logging new value 'DecisionTree'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:22:02,221 - models - INFO - DecisionTree - F1: 1.0000, Accuracy: 1.0000
+2025-10-05 02:22:02,221 - models - INFO - Training SVM...
+2025-10-05 02:22:02,264 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='4e52ed43af594681b081353a4a7774c5'. Attempted logging new value 'SVM'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:22:02,275 - models - INFO - SVM - F1: 0.9722, Accuracy: 0.9766
+2025-10-05 02:22:02,275 - models - INFO - Training MLP...
+2025-10-05 02:22:03,223 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='4e52ed43af594681b081353a4a7774c5'. Attempted logging new value 'MLP'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:22:03,234 - models - INFO - MLP - F1: 0.9853, Accuracy: 0.9883
+2025-10-05 02:22:03,234 - models - INFO - Training VotingClassifier...
+2025-10-05 02:22:04,640 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='4e52ed43af594681b081353a4a7774c5'. Attempted logging new value 'VotingClassifier'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:22:04,651 - models - INFO - VotingClassifier - F1: 0.9936, Accuracy: 0.9942
+2025-10-05 02:22:04,651 - models - INFO - Training StackingClassifier...
+2025-10-05 02:22:08,957 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LogisticRegression' for run ID='4e52ed43af594681b081353a4a7774c5'. Attempted logging new value 'StackingClassifier'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:22:08,967 - models - INFO - StackingClassifier - F1: 0.9936, Accuracy: 0.9942
+2025-10-05 02:22:08,969 - models - INFO - Best model for Winter: XGBoost with F1 1.0000
+2025-10-05 02:22:08,971 - experiment_tracking - INFO - MLflow run ended
+2025-10-05 02:22:08,971 - evaluate_enhanced - INFO - Generating comprehensive report for Winter classification
+2025-10-05 02:22:08,971 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/winter/comprehensive_report.md
+2025-10-05 02:22:08,971 - __main__ - INFO - Classification pipeline completed for 4 seasons
+2025-10-05 02:22:08,972 - __main__ - INFO - 
+=== Starting Enhanced Regression Pipeline ===
+2025-10-05 02:22:08,972 - preprocess - INFO - Preprocessing data for regression
+2025-10-05 02:22:08,972 - preprocess - INFO - Available regression features: ['CO (mg/m3)', 'SO2(µg/m³)', 'NO2(µg/m³)', 'PM10(µg/m³)', 'Temp(°C)', 'RH (%)', 'Hour']
+2025-10-05 02:22:08,981 - preprocess - INFO - Regression training samples: 8147
+2025-10-05 02:22:08,981 - preprocess - INFO - Regression test samples: 2037
+2025-10-05 02:22:08,986 - experiment_tracking - INFO - Started MLflow run: pm25_regression
+2025-10-05 02:22:08,986 - models - INFO - Training regression models
+2025-10-05 02:22:08,987 - hyperparameter_tuning - INFO - Starting hyperparameter tuning for regression models...
+2025-10-05 02:22:08,987 - hyperparameter_tuning - INFO - Tuning DecisionTree...
+2025-10-05 02:22:09,230 - hyperparameter_tuning - INFO - DecisionTree best score: 0.7832
+2025-10-05 02:22:09,230 - hyperparameter_tuning - INFO - DecisionTree best params: {'max_depth': 5, 'min_samples_leaf': 4, 'min_samples_split': 2}
+2025-10-05 02:22:09,230 - hyperparameter_tuning - INFO - Tuning RandomForest...
+2025-10-05 02:23:20,512 - hyperparameter_tuning - INFO - RandomForest best score: 0.8260
+2025-10-05 02:23:20,512 - hyperparameter_tuning - INFO - RandomForest best params: {'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 200}
+2025-10-05 02:23:20,512 - hyperparameter_tuning - INFO - Tuning XGBoost...
+2025-10-05 02:23:21,725 - hyperparameter_tuning - INFO - XGBoost best score: 0.8233
+2025-10-05 02:23:21,726 - hyperparameter_tuning - INFO - XGBoost best params: {'subsample': 0.8, 'n_estimators': 200, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+2025-10-05 02:23:21,726 - hyperparameter_tuning - INFO - Tuning LightGBM...
+2025-10-05 02:48:04,351 - hyperparameter_tuning - INFO - LightGBM best score: 0.8211
+2025-10-05 02:48:04,351 - hyperparameter_tuning - INFO - LightGBM best params: {'num_leaves': 31, 'n_estimators': 100, 'max_depth': 7, 'learning_rate': 0.1, 'feature_fraction': 0.8}
+2025-10-05 02:48:04,351 - hyperparameter_tuning - INFO - Tuning SVM...
+2025-10-05 02:48:35,879 - hyperparameter_tuning - INFO - SVM best score: 0.7685
+2025-10-05 02:48:35,879 - hyperparameter_tuning - INFO - SVM best params: {'C': 100, 'epsilon': 0.2, 'gamma': 'scale', 'kernel': 'rbf'}
+2025-10-05 02:48:35,879 - hyperparameter_tuning - INFO - Tuning MLP...
+2025-10-05 02:52:23,094 - hyperparameter_tuning - INFO - MLP best score: 0.7860
+2025-10-05 02:52:23,094 - hyperparameter_tuning - INFO - MLP best params: {'activation': 'tanh', 'alpha': 0.0001, 'hidden_layer_sizes': (100,), 'learning_rate': 'constant'}
+2025-10-05 02:52:23,095 - models - INFO - Hyperparameter tuning completed
+2025-10-05 02:52:23,095 - ensemble_models - INFO - Creating voting regressor...
+2025-10-05 02:53:28,029 - ensemble_models - INFO - Voting regressor R² score: 0.8126
+2025-10-05 02:53:28,029 - ensemble_models - INFO - Creating stacking regressor...
+2025-10-05 02:56:46,205 - ensemble_models - INFO - Stacking regressor R² score: 0.8302
+2025-10-05 02:56:46,205 - ensemble_models - INFO - Created 2 ensemble models
+2025-10-05 02:56:46,205 - models - INFO - Ensemble models created
+2025-10-05 02:56:46,205 - models - INFO - Training LinearRegression...
+2025-10-05 02:56:46,215 - models - INFO - LinearRegression - R2: 0.5983, RMSE: 11.7788
+2025-10-05 02:56:46,215 - models - INFO - Training DecisionTree...
+2025-10-05 02:56:46,229 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LinearRegression' for run ID='8ffb73f7d545494dbf2c874bf9dcac14'. Attempted logging new value 'DecisionTree'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:56:46,237 - models - INFO - DecisionTree - R2: 0.7983, RMSE: 8.3469
+2025-10-05 02:56:46,237 - models - INFO - Training RandomForest...
+2025-10-05 02:56:50,182 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LinearRegression' for run ID='8ffb73f7d545494dbf2c874bf9dcac14'. Attempted logging new value 'RandomForest'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:56:50,190 - models - INFO - RandomForest - R2: 0.8421, RMSE: 7.3852
+2025-10-05 02:56:50,190 - models - INFO - Training XGBoost...
+2025-10-05 02:56:50,618 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LinearRegression' for run ID='8ffb73f7d545494dbf2c874bf9dcac14'. Attempted logging new value 'XGBoost'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:56:50,627 - models - INFO - XGBoost - R2: 0.8331, RMSE: 7.5929
+2025-10-05 02:56:50,627 - models - INFO - Training LightGBM...
+2025-10-05 02:56:50,670 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LinearRegression' for run ID='8ffb73f7d545494dbf2c874bf9dcac14'. Attempted logging new value 'LightGBM'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:56:50,678 - models - INFO - LightGBM - R2: 0.8281, RMSE: 7.7062
+2025-10-05 02:56:50,678 - models - INFO - Training SVM...
+2025-10-05 02:56:53,483 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LinearRegression' for run ID='8ffb73f7d545494dbf2c874bf9dcac14'. Attempted logging new value 'SVM'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:56:53,490 - models - INFO - SVM - R2: 0.7858, RMSE: 8.6006
+2025-10-05 02:56:53,490 - models - INFO - Training MLP...
+2025-10-05 02:57:06,245 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LinearRegression' for run ID='8ffb73f7d545494dbf2c874bf9dcac14'. Attempted logging new value 'MLP'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:57:06,252 - models - INFO - MLP - R2: 0.7992, RMSE: 8.3275
+2025-10-05 02:57:06,252 - models - INFO - Training VotingRegressor...
+2025-10-05 02:57:26,751 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LinearRegression' for run ID='8ffb73f7d545494dbf2c874bf9dcac14'. Attempted logging new value 'VotingRegressor'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:57:26,758 - models - INFO - VotingRegressor - R2: 0.8263, RMSE: 7.7464
+2025-10-05 02:57:26,758 - models - INFO - Training StackingRegressor...
+2025-10-05 02:58:31,793 - experiment_tracking - ERROR - Failed to log parameters: Changing param values is not allowed. Param with key='model_name' was already logged with value='LinearRegression' for run ID='8ffb73f7d545494dbf2c874bf9dcac14'. Attempted logging new value 'StackingRegressor'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.
+2025-10-05 02:58:31,800 - models - INFO - StackingRegressor - R2: 0.8429, RMSE: 7.3665
+2025-10-05 02:58:32,399 - models - INFO - Best regression model: StackingRegressor with R2 0.8429
+2025-10-05 02:58:32,401 - evaluate_enhanced - INFO - Generating comprehensive report for Regression regression
+2025-10-05 02:58:32,401 - evaluate_enhanced - INFO - Comprehensive report saved to artifacts/evaluation/regression/comprehensive_report.md
+2025-10-05 02:58:32,402 - experiment_tracking - INFO - MLflow run ended
+2025-10-05 02:58:32,402 - __main__ - INFO - Enhanced regression pipeline completed successfully
+2025-10-05 02:58:32,402 - __main__ - INFO - 
+=== Starting Enhanced Visualization Pipeline ===
+2025-10-05 02:58:32,402 - config_loader - WARNING - Configuration key 'plotting.sample_size' not found, using default: 100
+2025-10-05 02:58:32,402 - plot_sampled_predictions - INFO - Creating regression prediction plots on random sample
+2025-10-05 02:58:32,413 - plot_sampled_predictions - INFO - Found 7 models: ['LinearRegression', 'DecisionTree', 'RandomForest', 'XGBoost', 'LightGBM', 'SVM', 'MLP']
+2025-10-05 02:58:32,416 - plot_sampled_predictions - INFO - LinearRegression R²: 0.704
+2025-10-05 02:58:32,417 - plot_sampled_predictions - INFO - DecisionTree R²: 0.763
+2025-10-05 02:58:32,489 - plot_sampled_predictions - INFO - RandomForest R²: 0.930
+2025-10-05 02:58:32,497 - plot_sampled_predictions - INFO - XGBoost R²: 0.935
+2025-10-05 02:58:32,501 - plot_sampled_predictions - INFO - LightGBM R²: 0.833
+2025-10-05 02:58:32,522 - plot_sampled_predictions - INFO - SVM R²: 0.767
+2025-10-05 02:58:32,526 - plot_sampled_predictions - INFO - MLP R²: 0.775
+2025-10-05 02:58:33,825 - plot_sampled_predictions - INFO - Sampled predictions plot saved to artifacts/models/regression/sampled_predictions_comparison.png
+2025-10-05 02:58:33,825 - compare_model_predictions - INFO - Comparing classification models for Spring
+2025-10-05 02:58:35,216 - compare_model_predictions - INFO - Classification model comparison completed for Spring
+2025-10-05 02:58:35,216 - compare_model_predictions - INFO - Comparing classification models for Summer
+2025-10-05 02:58:36,340 - compare_model_predictions - INFO - Classification model comparison completed for Summer
+2025-10-05 02:58:36,340 - compare_model_predictions - INFO - Comparing classification models for Autumn
+2025-10-05 02:58:37,465 - compare_model_predictions - INFO - Classification model comparison completed for Autumn
+2025-10-05 02:58:37,465 - compare_model_predictions - INFO - Comparing classification models for Winter
+2025-10-05 02:58:38,734 - compare_model_predictions - INFO - Classification model comparison completed for Winter
+2025-10-05 02:58:38,734 - compare_model_predictions - INFO - Comparing regression models
+2025-10-05 02:58:39,953 - compare_model_predictions - INFO - Regression model comparison completed
+2025-10-05 02:58:39,953 - evaluate_enhanced - INFO - Performing advanced seasonal model comparison
+2025-10-05 02:58:40,677 - evaluate_enhanced - INFO - Advanced seasonal comparison completed
+2025-10-05 02:58:40,677 - __main__ - INFO - Enhanced visualization pipeline completed
+2025-10-05 02:58:40,677 - __main__ - INFO - 
+=== Enhanced Pipeline Summary ===
+2025-10-05 02:58:40,677 - __main__ - INFO - Total execution time: 12960.13 seconds
+2025-10-05 02:58:40,677 - __main__ - INFO - Configuration used: config.yaml
+2025-10-05 02:58:40,677 - __main__ - INFO - Classification models trained for: ['Spring', 'Summer', 'Autumn', 'Winter']
+2025-10-05 02:58:40,677 - __main__ - INFO - Regression models trained: 3 models
+2025-10-05 02:58:40,677 - __main__ - INFO - Hyperparameter tuning: Enabled
+2025-10-05 02:58:40,677 - __main__ - INFO - Ensemble models: Enabled
+2025-10-05 02:58:40,677 - __main__ - INFO - Experiment tracking: Enabled
+2025-10-05 02:58:40,677 - __main__ - INFO - Artifacts saved to: /home/ansari/farah/artifacts
+2025-10-05 02:58:40,677 - config_loader - WARNING - Configuration key 'advanced.run_tests' not found, using default: False

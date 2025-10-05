@@ -1,0 +1,141 @@
+# Air Quality Prediction Pipeline Configuration
+
+# Data settings
+data:
+  raw_file: "Airquality9.csv"
+  cleaned_file: "artifacts/data_cleaned.csv"
+  target_classification: "AQI_Category"
+  target_regression: "PM2.5(µg/m³)"
+  
+# Feature settings
+features:
+  base_features:
+    - "CO (mg/m3)"
+    - "SO2(µg/m³)"
+    - "NO2(µg/m³)"
+    - "PM2.5(µg/m³)"
+    - "PM10(µg/m³)"
+    - "Temp(°C)"
+    - "RH (%)"
+    - "Hour"
+  
+  use_feature_engineering: true
+  
+  # Rolling window settings
+  rolling_windows: [3, 6, 12]  # hours
+  lag_features: [1, 2, 3]      # time steps
+  
+# Model settings
+models:
+  classification:
+    use_models:
+      - "LogisticRegression"
+      - "RandomForest"
+      - "XGBoost"
+      - "LightGBM"
+      - "DecisionTree"
+      - "SVM"
+      - "MLP"
+    
+    ensemble:
+      use_voting: true
+      use_stacking: true
+  
+  regression:
+    use_models:
+      - "LinearRegression"
+      - "DecisionTree"
+      - "RandomForest"
+      - "XGBoost"
+      - "LightGBM"
+      - "SVM"
+      - "MLP"
+    
+    ensemble:
+      use_voting: true
+      use_stacking: true
+
+# Training settings
+training:
+  test_size: 0.2
+  validation_size: 0.2
+  random_state: 42
+  cv_folds: 5
+  
+  hyperparameter_tuning:
+    enabled: false
+    method: "randomized"  # "grid" or "randomized"
+    n_iter: 20           # for randomized search
+    n_jobs: -1
+    
+  early_stopping:
+    enabled: true
+    patience: 10
+    min_delta: 0.001
+
+# Evaluation settings
+evaluation:
+  classification_metrics:
+    - "accuracy"
+    - "f1_macro"
+    - "precision_macro"
+    - "recall_macro"
+  
+  regression_metrics:
+    - "r2"
+    - "mae"
+    - "rmse"
+    - "mape"
+  
+  temporal_validation: true
+  split_date: "2023-01-01"  # Use data before this for training, after for testing
+
+# AQI Categories and thresholds
+aqi:
+  pm25_breakpoints:
+    good: [0, 12.0]
+    moderate: [12.1, 35.4]
+    unhealthy_sensitive: [35.5, 55.4]
+    unhealthy: [55.5, 150.4]
+    very_unhealthy: [150.5, 250.4]
+    hazardous: [250.5, 500.0]
+
+# Paths and directories
+paths:
+  artifacts_dir: "artifacts"
+  models_dir: "artifacts/models"
+  evaluation_dir: "artifacts/evaluation"
+  eda_dir: "artifacts/eda"
+  plots_dir: "artifacts/plots"
+  logs_dir: "logs"
+
+# Logging settings
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_logging: true
+  console_logging: true
+
+# Experiment tracking
+experiment_tracking:
+  enabled: false
+  backend: "mlflow"  # "mlflow" or "wandb"
+  experiment_name: "air_quality_prediction"
+  run_name_prefix: "run_"
+
+# Plotting settings
+plotting:
+  style: "whitegrid"
+  figure_size: [12, 8]
+  dpi: 300
+  color_palette: "husl"
+  save_format: "png"
+
+# Advanced settings
+advanced:
+  parallel_training: true
+  memory_efficient: false
+  save_intermediate: true
+  auto_feature_selection: false
+  outlier_detection: true
+  outlier_method: "isolation_forest"  # "z_score", "iqr", "isolation_forest"

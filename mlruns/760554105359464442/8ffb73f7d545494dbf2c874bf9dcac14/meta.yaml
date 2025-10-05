@@ -1,0 +1,14 @@
+artifact_uri: /home/ansari/farah/mlruns/760554105359464442/8ffb73f7d545494dbf2c874bf9dcac14/artifacts
+end_time: 1759647512401
+entry_point_name: ''
+experiment_id: '760554105359464442'
+lifecycle_stage: active
+run_id: 8ffb73f7d545494dbf2c874bf9dcac14
+run_name: pm25_regression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759645328982
+status: 3
+tags: []
+user_id: ansari

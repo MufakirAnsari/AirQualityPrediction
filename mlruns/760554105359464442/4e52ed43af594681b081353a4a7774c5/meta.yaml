@@ -1,0 +1,14 @@
+artifact_uri: /home/ansari/farah/mlruns/760554105359464442/4e52ed43af594681b081353a4a7774c5/artifacts
+end_time: 1759645328971
+entry_point_name: ''
+experiment_id: '760554105359464442'
+lifecycle_stage: active
+run_id: 4e52ed43af594681b081353a4a7774c5
+run_name: classification_winter
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759642782818
+status: 3
+tags: []
+user_id: ansari

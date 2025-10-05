@@ -1,0 +1,14 @@
+artifact_uri: /home/ansari/farah/mlruns/760554105359464442/8dccaf7f8051416587516001f82a8938/artifacts
+end_time: 1759642778665
+entry_point_name: ''
+experiment_id: '760554105359464442'
+lifecycle_stage: active
+run_id: 8dccaf7f8051416587516001f82a8938
+run_name: classification_autumn
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759639170584
+status: 3
+tags: []
+user_id: ansari

@@ -1,0 +1,14 @@
+artifact_uri: /home/ansari/farah/mlruns/760554105359464442/c5779ba862ef4bf28474253a52b5005f/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '760554105359464442'
+lifecycle_stage: active
+run_id: c5779ba862ef4bf28474253a52b5005f
+run_name: classification_spring
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759633659347
+status: 1
+tags: []
+user_id: ansari

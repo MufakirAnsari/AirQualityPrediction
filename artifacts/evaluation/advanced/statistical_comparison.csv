@@ -1,0 +1,10 @@
+,f_statistic,p_value,significant
+DecisionTree,,,False
+VotingClassifier,,,False
+LightGBM,,,False
+StackingClassifier,,,False
+RandomForest,,,False
+XGBoost,,,False
+MLP,,,False
+LogisticRegression,,,False
+SVM,,,False
