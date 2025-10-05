@@ -91,11 +91,6 @@ Options:
 
 If you use or adapt this pipeline for research or production, please consider citing or referencing this repository in your publications or documentation.
 
-
-## License
-
-[MIT] or [Specify your license]
-
 ***
 
 *For questions, support, or improvements: please open an Issue or Pull Request on GitHub.*
